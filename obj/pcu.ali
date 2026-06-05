@@ -1,0 +1,47 @@
+V "GNAT Lib v2021"
+A -gnatA
+A -gnat2020
+A -mtune=generic
+A -march=x86-64
+P ZX
+
+RN
+RV NO_IMPLEMENTATION_ASPECT_SPECIFICATIONS
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U pcu%b			pcu.adb			a001a09d NE OO PK IU
+
+U pcu%s			pcu.ads			52f7b4a6 EB NE OO PK IU
+
+D pcu.ads		20251016225726 52f7b4a6 pcu%s
+D pcu.adb		20251018124846 f2f6143b pcu%b
+D system.ads		20210520051136 2ffa5114 system%s
+G a e
+G c Z s b [enablealarm pcu 19 14 none]
+G c Z s b [disablealarm pcu 27 14 none]
+G c Z s b [isenabledalarm pcu 33 13 none]
+G c Z s b [recordmodebuttonpressed pcu 40 14 none]
+G c Z s b [recordmodebuttonnotpressed pcu 47 14 none]
+G c Z s b [ismodebuttonpressed pcu 54 13 none]
+G c Z s b [togglemode pcu 60 14 none]
+G c Z s b [isenabledmode pcu 68 13 none]
+G c Z s b [isenabledmodeindicator pcu 74 13 none]
+X 1 pcu.ads
+7K10*PCU 79l5 79e8 2|3b14 66l5 66t8
+12b4*AlarmON{boolean} 21r30 23r18 29r29 30r18 35r26 36r43 2|7m7 19m7 24r14
+13i4*AlarmCnt{integer} 22r30 24r18 24r30 2|8r11 10m10 10r22 11m12
+14b4*ModeButtonPressed{boolean} 42r29 43r19 49r29 50r19 56r28 57r49 2|29m7
+. 34m7 40r14
+15b4*ModeON{boolean} 62r27 64r18 64r28 65r37 70r26 71r42 2|45r10 46m10 48m10
+. 50r26 57r14
+16b4*ModeIndicatorON{boolean} 63r27 65r18 76r26 77r51 2|50m7 62r14
+19U14*EnableAlarm 2|5b14 15l8 15t19
+27U14*DisableAlarm 2|17b14 20l8 20t20
+33V13*isEnabledAlarm{boolean} 36r18 2|22b13 25l8 25t22
+40U14*RecordModeButtonPressed 2|27b14 30l8 30t31
+47U14*RecordModeButtonNotPressed 2|32b14 36l8 36t34
+54V13*isModeButtonPressed{boolean} 57r19 2|38b13 41l8 41t27
+60U14*ToggleMode 2|43b14 53l8 53t18
+68V13*isEnabledMode{boolean} 71r18 2|55b13 58l8 58t21
+74V13*isEnabledModeIndicator{boolean} 77r18 2|60b13 63l8 63t30
+

@@ -1,0 +1,41 @@
+V "GNAT Lib v2021"
+A -gnatA
+A -gnat2020
+A -mtune=generic
+A -march=x86-64
+P ZX
+
+RN
+RV NO_IMPLEMENTATION_ASPECT_SPECIFICATIONS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_ELABORATION_CODE
+
+U hsu%b			hsu.adb			67dafd6b OO PK IU
+
+U hsu%s			hsu.ads			8e29cae1 EB EE NE OO PK IU
+
+D hsu.ads		20251016141516 8e29cae1 hsu%s
+D hsu.adb		20251018123912 e9f3378a hsu%b
+D system.ads		20210520051136 2ffa5114 system%s
+G a e
+G c Z s b [tailplaneup hsu 17 14 none]
+G c Z s b [tailplanedown hsu 23 14 none]
+G c Z s b [tailplanenormal hsu 29 14 none]
+G c Z s b [istailplaneup hsu 35 13 none]
+G c Z s b [istailplanedown hsu 41 13 none]
+G c Z s b [istailplanenormal hsu 47 13 none]
+X 1 hsu.ads
+7K9*HSU 52l5 52e8 2|2b14 38l5 38t8
+12E9*Position 12e39 14r21
+12n22*UP{12E9} 2|7r25 22r31
+12n26*NORMAL{12E9} 2|17r25 32r31 36r22
+12n34*DOWN{12E9} 2|12r25 27r31
+14e4*TailplaneState{12E9} 19r27 20r18 25r27 26r18 31r27 32r18 37r26 38r42
+. 43r26 44r44 49r26 50r46 2|7m7 12m7 17m7 22r14 27r14 32r14 36m4
+17U14*TailplaneUP 2|5b14 8l8 8t19
+23U14*TailplaneDOWN 2|10b14 13l8 13t21
+29U14*TailplaneNORMAL 2|15b14 18l8 18t23
+35V13*isTailplaneUP{boolean} 38r18 2|20b13 23l8 23t21
+41V13*isTailplaneDOWN{boolean} 44r18 2|25b13 28l8 28t23
+47V13*isTailplaneNORMAL{boolean} 50r18 2|30b13 33l8 33t25
+

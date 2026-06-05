@@ -1,0 +1,1054 @@
+module Standard__integer
+  use _gnatprove_standard.Main
+  use int.Int
+  use int.Int
+  
+  type integer = <range -2147483648 2147483647>
+  
+  val function first : int
+    ensures { result = ((- 2147483648) : int) }
+  
+  val function last : int
+    ensures { result = (2147483647 : int) }
+  
+  predicate in_range (x: int) = ((first <= x) /\ (x <= last))
+  
+  val in_range (x: int) : bool
+    ensures { result <-> (in_range (x : int)) }
+  
+  clone export ada__model.Static_Discrete with
+    axiom .,
+    type t = integer,
+    function first = first,
+    function last = last,
+    predicate in_range = in_range
+  
+  type integer__ref = { mutable integer__content : integer }
+  
+  function integer__ref_integer__content__projection (a: integer__ref) : integer =
+    a.integer__content
+  
+  meta "model_projection" function integer__ref_integer__content__projection
+  
+  meta "inline:no" function integer__ref_integer__content__projection
+  
+  val integer__havoc (x: integer__ref) : unit
+    writes { x }
+end
+
+module Standard__natural
+  use _gnatprove_standard.Main
+  use int.Int
+  use int.Int
+  
+  type natural = <range 0 2147483647>
+  
+  val function first : int
+    ensures { result = (0 : int) }
+  
+  val function last : int
+    ensures { result = (2147483647 : int) }
+  
+  predicate in_range (x: int) = ((first <= x) /\ (x <= last))
+  
+  val in_range (x: int) : bool
+    ensures { result <-> (in_range (x : int)) }
+  
+  clone export ada__model.Static_Discrete with
+    axiom .,
+    type t = natural,
+    function first = first,
+    function last = last,
+    predicate in_range = in_range
+  
+  type natural__ref = { mutable natural__content : natural }
+  
+  function natural__ref_natural__content__projection (a: natural__ref) : natural =
+    a.natural__content
+  
+  meta "model_projection" function natural__ref_natural__content__projection
+  
+  meta "inline:no" function natural__ref_natural__content__projection
+  
+  val natural__havoc (x: natural__ref) : unit
+    writes { x }
+end
+
+module Standard__natural___axiom
+  use _gnatprove_standard.Main
+  use int.Int
+  use int.Int
+  use Standard__natural as Standard__natural
+  
+  predicate dynamic_invariant (temp___expr_46: int) (temp___is_init_42: bool) (temp___skip_constant_43: bool) (temp___do_toplevel_44: bool) (temp___do_typ_inv_45: bool) =
+    if ((temp___is_init_42 = True) \/
+          (Standard__natural.first <= Standard__natural.last)) then
+      (((Standard__natural.dynamic_property Standard__natural.first)
+          Standard__natural.last)
+         temp___expr_46)
+    else true
+  
+  val dynamic_invariant (temp___expr_46: int) (temp___is_init_42: bool) (temp___skip_constant_43: bool) (temp___do_toplevel_44: bool) (temp___do_typ_inv_45: bool) : 
+    bool
+    ensures { result
+                <->
+                (((((dynamic_invariant (temp___expr_46 : int))
+                      (temp___is_init_42 : bool))
+                     (temp___skip_constant_43 : bool))
+                    (temp___do_toplevel_44 : bool))
+                   (temp___do_typ_inv_45 : bool)) }
+  
+  predicate default_initial_assumption (temp___expr_47: int) (temp___skip_top_level_48: bool) =
+    true
+  
+  val default_initial_assumption (temp___expr_47: int) (temp___skip_top_level_48: bool) : 
+    bool
+    ensures { result
+                <->
+                ((default_initial_assumption (temp___expr_47 : int))
+                   (temp___skip_top_level_48 : bool)) }
+end
+
+module Aoa__sensor_type
+  use _gnatprove_standard.Main
+  use int.Int
+  use int.Int
+  
+  type sensor_type = <range -60 61>
+  
+  val function first : int
+    ensures { result = ((- 60) : int) }
+  
+  val function last : int
+    ensures { result = (61 : int) }
+  
+  predicate in_range (x: int) = ((first <= x) /\ (x <= last))
+  
+  val in_range (x: int) : bool
+    ensures { result <-> (in_range (x : int)) }
+  
+  clone export ada__model.Static_Discrete with
+    axiom .,
+    type t = sensor_type,
+    function first = first,
+    function last = last,
+    predicate in_range = in_range
+  
+  type sensor_type__ref = { mutable sensor_type__content : sensor_type }
+  
+  function sensor_type__ref_sensor_type__content__projection (a: sensor_type__ref) : sensor_type =
+    a.sensor_type__content
+  
+  meta "model_projection" function sensor_type__ref_sensor_type__content__projection
+  
+  meta "inline:no" function sensor_type__ref_sensor_type__content__projection
+  
+  val sensor_type__havoc (x: sensor_type__ref) : unit
+    writes { x }
+end
+
+module Aoa__sensor_type__rep
+  use Aoa__sensor_type as Aoa__sensor_type
+  use _gnatprove_standard.Main
+  use int.Int
+  
+  function to_rep (x: Aoa__sensor_type.sensor_type) : int =
+    Aoa__sensor_type.sensor_type'int x
+  
+  clone export ada__model.Rep_Proj_Int with
+    axiom .,
+    type t = Aoa__sensor_type.sensor_type,
+    predicate in_range = Aoa__sensor_type.in_range,
+    function to_rep = to_rep
+  
+  meta "model_projection" function to_rep
+  
+  meta "inline:no" function to_rep
+end
+
+module Array__Int__Aoa__sensor_type
+  use _gnatprove_standard.Main
+  use int.Int
+  use int.Int
+  use Aoa__sensor_type as Aoa__sensor_type
+  use Aoa__sensor_type__rep as Aoa__sensor_type__rep
+  
+  function index_I1_one : int = 1 : int
+  
+  type component_type = Aoa__sensor_type.sensor_type
+  
+  clone export _gnatprove_standard.Array__1 with
+    axiom .,
+    type I1.t = int,
+    predicate I1.le = Int.( <= ),
+    predicate I1.lt = Int.( < ),
+    predicate I1.gt = Int.( > ),
+    function I1.add = Int.( + ),
+    function I1.sub = Int.( - ),
+    function I1.one = index_I1_one,
+    type component_type = component_type
+  
+  function bool_eq (a: map) (a__first: int) (a__last: int) (b: map) (b__first: int) (b__last: int) : bool =
+    ((if (a__first <= a__last) then
+        ((b__first <= b__last) /\
+           ((a__last - a__first) = (b__last - b__first)))
+      else (b__first > b__last)) /\
+       (forall temp___idx_161 : int.
+          if ((a__first <= temp___idx_161) /\ (temp___idx_161 <= a__last)) then
+            ((Aoa__sensor_type__rep.to_rep ((get a) temp___idx_161))
+               = (Aoa__sensor_type__rep.to_rep
+                    ((get b) ((b__first - a__first) + temp___idx_161))))
+          else true))
+  
+  val bool_eq (a: map) (a__first: int) (a__last: int) (b: map) (b__first: int) (b__last: int) : 
+    bool
+    ensures { result
+      =
+      ((((((bool_eq (a : map)) (a__first : int)) (a__last : int)) (b : map))
+          (b__first : int))
+         (b__last : int)) }
+  
+  axiom bool_eq_rev:
+    forall a : map, b : map.
+      forall a__first : int, a__last : int, b__first : int, b__last : int.
+        ((((((((bool_eq b) b__first) b__last) a) a__first) a__last) = True) ->
+           ((if (a__first <= a__last) then
+               ((b__first <= b__last) /\
+                  ((a__last - a__first) = (b__last - b__first)))
+             else (b__first > b__last)) /\
+              (forall temp___idx_161 : int.
+                 if ((a__first <= temp___idx_161) /\
+                       (temp___idx_161 <= a__last)) then
+                   ((Aoa__sensor_type__rep.to_rep ((get a) temp___idx_161))
+                      = (Aoa__sensor_type__rep.to_rep
+                           ((get b) ((b__first - a__first) + temp___idx_161))))
+                 else true)))
+end
+
+module Aoa__sensorstate
+  use _gnatprove_standard.Main
+  use int.Int
+  use Array__Int__Aoa__sensor_type as Array__Int__Aoa__sensor_type
+  
+  val sensorstate : Array__Int__Aoa__sensor_type.map__ref
+end
+
+module Aoa__read_sensor_majority__values
+  use _gnatprove_standard.Main
+  use int.Int
+  use Array__Int__Aoa__sensor_type as Array__Int__Aoa__sensor_type
+  
+  val values : Array__Int__Aoa__sensor_type.map__ref
+end
+
+module Aoa__read_sensor_majority__defined_count
+  use _gnatprove_standard.Main
+  use int.Int
+  
+  val defined_count : int__ref
+end
+
+module Aoa__read_sensor_majority__maj_v
+  use _gnatprove_standard.Main
+  use int.Int
+  
+  val maj_v : int__ref
+end
+
+module Aoa__read_sensor_majority__L_1__i
+  use _gnatprove_standard.Main
+  use int.Int
+  
+  val i : int__ref
+end
+
+module Aoa__read_sensor_majority__B_2__temp
+  use _gnatprove_standard.Main
+  use int.Int
+  use Array__Int__Aoa__sensor_type as Array__Int__Aoa__sensor_type
+  
+  val temp : Array__Int__Aoa__sensor_type.map__ref
+end
+
+module Aoa__read_sensor_majority__B_2__minim
+  use _gnatprove_standard.Main
+  use int.Int
+  
+  val minim : int__ref
+end
+
+module Aoa__read_sensor_majority__B_2__maxim
+  use _gnatprove_standard.Main
+  use int.Int
+  
+  val maxim : int__ref
+end
+
+module Aoa__sensor_type___axiom
+  use _gnatprove_standard.Main
+  use int.Int
+  use int.Int
+  use Aoa__sensor_type as Aoa__sensor_type
+  
+  predicate dynamic_invariant (temp___expr_168: int) (temp___is_init_164: bool) (temp___skip_constant_165: bool) (temp___do_toplevel_166: bool) (temp___do_typ_inv_167: bool) =
+    if ((temp___is_init_164 = True) \/
+          (Aoa__sensor_type.first <= Aoa__sensor_type.last)) then
+      (((Aoa__sensor_type.dynamic_property Aoa__sensor_type.first)
+          Aoa__sensor_type.last)
+         temp___expr_168)
+    else true
+  
+  val dynamic_invariant (temp___expr_168: int) (temp___is_init_164: bool) (temp___skip_constant_165: bool) (temp___do_toplevel_166: bool) (temp___do_typ_inv_167: bool) : 
+    bool
+    ensures { result
+                <->
+                (((((dynamic_invariant (temp___expr_168 : int))
+                      (temp___is_init_164 : bool))
+                     (temp___skip_constant_165 : bool))
+                    (temp___do_toplevel_166 : bool))
+                   (temp___do_typ_inv_167 : bool)) }
+  
+  predicate default_initial_assumption (temp___expr_169: int) (temp___skip_top_level_170: bool) =
+    true
+  
+  val default_initial_assumption (temp___expr_169: int) (temp___skip_top_level_170: bool) : 
+    bool
+    ensures { result
+                <->
+                ((default_initial_assumption (temp___expr_169 : int))
+                   (temp___skip_top_level_170 : bool)) }
+end
+
+module Aoa__sensors_type___axiom
+  use _gnatprove_standard.Main
+  use int.Int
+  use Array__Int__Aoa__sensor_type as Array__Int__Aoa__sensor_type
+  use Array__Int__Aoa__sensor_type as Array__Int__Aoa__sensor_type
+  
+  predicate dynamic_invariant (temp___expr_182: Array__Int__Aoa__sensor_type.map) (temp___is_init_178: bool) (temp___skip_constant_179: bool) (temp___do_toplevel_180: bool) (temp___do_typ_inv_181: bool) =
+    true
+  
+  val dynamic_invariant (temp___expr_182: Array__Int__Aoa__sensor_type.map) (temp___is_init_178: bool) (temp___skip_constant_179: bool) (temp___do_toplevel_180: bool) (temp___do_typ_inv_181: bool) : 
+    bool
+    ensures { result
+                <->
+                (((((dynamic_invariant
+                       (temp___expr_182 : Array__Int__Aoa__sensor_type.map))
+                      (temp___is_init_178 : bool))
+                     (temp___skip_constant_179 : bool))
+                    (temp___do_toplevel_180 : bool))
+                   (temp___do_typ_inv_181 : bool)) }
+  
+  predicate default_initial_assumption (temp___expr_184: Array__Int__Aoa__sensor_type.map) (temp___skip_top_level_185: bool) =
+    true
+  
+  val default_initial_assumption (temp___expr_184: Array__Int__Aoa__sensor_type.map) (temp___skip_top_level_185: bool) : 
+    bool
+    ensures { result
+                <->
+                ((default_initial_assumption
+                    (temp___expr_184 : Array__Int__Aoa__sensor_type.map))
+                   (temp___skip_top_level_185 : bool)) }
+end
+
+module Aoa__read_sensor_majority__L_1
+  use _gnatprove_standard.Main
+  use int.Int
+  
+  exception L_1
+end
+
+module Aoa__read_sensor_majority__B_2__temp__aggregate_def
+  use _gnatprove_standard.Main
+  use int.Int
+  use Array__Int__Aoa__sensor_type as Array__Int__Aoa__sensor_type
+  
+  val function aoa__read_sensor_majority__B_2__temp__aggregate_def (temp___212: int) (temp___213: int) (temp___214: int) : 
+    Array__Int__Aoa__sensor_type.map
+end
+
+module Standard__integer___axiom
+  use _gnatprove_standard.Main
+  use int.Int
+  use int.Int
+  use Standard__integer as Standard__integer
+  
+  predicate dynamic_invariant (temp___expr_18: int) (temp___is_init_14: bool) (temp___skip_constant_15: bool) (temp___do_toplevel_16: bool) (temp___do_typ_inv_17: bool) =
+    if ((temp___is_init_14 = True) \/
+          (Standard__integer.first <= Standard__integer.last)) then
+      (((Standard__integer.dynamic_property Standard__integer.first)
+          Standard__integer.last)
+         temp___expr_18)
+    else true
+  
+  val dynamic_invariant (temp___expr_18: int) (temp___is_init_14: bool) (temp___skip_constant_15: bool) (temp___do_toplevel_16: bool) (temp___do_typ_inv_17: bool) : 
+    bool
+    ensures { result
+                <->
+                (((((dynamic_invariant (temp___expr_18 : int))
+                      (temp___is_init_14 : bool))
+                     (temp___skip_constant_15 : bool))
+                    (temp___do_toplevel_16 : bool))
+                   (temp___do_typ_inv_17 : bool)) }
+  
+  predicate default_initial_assumption (temp___expr_19: int) (temp___skip_top_level_20: bool) =
+    true
+  
+  val default_initial_assumption (temp___expr_19: int) (temp___skip_top_level_20: bool) : 
+    bool
+    ensures { result
+                <->
+                ((default_initial_assumption (temp___expr_19 : int))
+                   (temp___skip_top_level_20 : bool)) }
+end
+
+module Aoa__read_sensor_majority__values___axiom
+  use _gnatprove_standard.Main
+  use int.Int
+end
+
+module Aoa__read_sensor_majority__defined_count___axiom
+  use _gnatprove_standard.Main
+  use int.Int
+end
+
+module Aoa__read_sensor_majority__maj_v___axiom
+  use _gnatprove_standard.Main
+  use int.Int
+end
+
+module Aoa__read_sensor_majority__L_1__i___axiom
+  use _gnatprove_standard.Main
+  use int.Int
+end
+
+module Aoa__read_sensor_majority__B_2__temp___axiom
+  use _gnatprove_standard.Main
+  use int.Int
+end
+
+module Aoa__read_sensor_majority__B_2__temp__aggregate_def___axiom
+  use _gnatprove_standard.Main
+  use int.Int
+  use int.Int
+  use Aoa__sensor_type as Aoa__sensor_type
+  use Aoa__sensor_type___axiom as Aoa__sensor_type___axiom
+  use Aoa__sensor_type__rep as Aoa__sensor_type__rep
+  use Array__Int__Aoa__sensor_type as Array__Int__Aoa__sensor_type
+  use Aoa__read_sensor_majority__B_2__temp__aggregate_def as Aoa__read_sensor_majority__B_2__temp__aggregate_def
+  use Array__Int__Aoa__sensor_type as Array__Int__Aoa__sensor_type
+  
+  axiom def_axiom:
+    forall temp___212 : int, temp___213 : int, temp___214 : int.
+      let temp___211 =
+        ((Aoa__read_sensor_majority__B_2__temp__aggregate_def.aoa__read_sensor_majority__B_2__temp__aggregate_def
+            temp___212)
+           temp___213)
+          temp___214 in
+      (((if (((((Aoa__sensor_type___axiom.dynamic_invariant temp___212) True)
+                 True)
+                True)
+               True) then
+           ((Aoa__sensor_type__rep.to_rep
+               ((Array__Int__Aoa__sensor_type.get temp___211) (1 : int)))
+              = temp___212)
+         else true) /\
+          (if (((((Aoa__sensor_type___axiom.dynamic_invariant temp___213)
+                    True)
+                   True)
+                  True)
+                 True) then
+             ((Aoa__sensor_type__rep.to_rep
+                 ((Array__Int__Aoa__sensor_type.get temp___211) (2 : int)))
+                = temp___213)
+           else true)) /\
+         (if (((((Aoa__sensor_type___axiom.dynamic_invariant temp___214) True)
+                  True)
+                 True)
+                True) then
+            ((Aoa__sensor_type__rep.to_rep
+                ((Array__Int__Aoa__sensor_type.get temp___211) (3 : int)))
+               = temp___214)
+          else true))
+end
+
+module Aoa__read_sensor_majority__B_2__minim___axiom
+  use _gnatprove_standard.Main
+  use int.Int
+end
+
+module Aoa__read_sensor_majority__B_2__maxim___axiom
+  use _gnatprove_standard.Main
+  use int.Int
+end
+
+module Aoa__read_sensor_majority__L_1___axiom
+  use _gnatprove_standard.Main
+  use int.Int
+end
+
+module Aoa__sensorstate___axiom
+  use _gnatprove_standard.Main
+  use int.Int
+end
+
+module Aoa__read_sensor_majority__subprogram_def
+  use _gnatprove_standard.Main
+  use int.Int
+  use int.Int
+  use _gnatprove_standard.Main as Main
+  use Standard__integer as Standard__integer
+  use Standard__natural___axiom as Standard__natural___axiom
+  use Array__Int__Aoa__sensor_type as Array__Int__Aoa__sensor_type
+  use Aoa__sensorstate as Aoa__sensorstate
+  use Array__Int__Aoa__sensor_type as Array__Int__Aoa__sensor_type
+  use Aoa__read_sensor_majority__values as Aoa__read_sensor_majority__values
+  use Aoa__read_sensor_majority__defined_count as Aoa__read_sensor_majority__defined_count
+  use Aoa__read_sensor_majority__maj_v as Aoa__read_sensor_majority__maj_v
+  use Aoa__read_sensor_majority__L_1__i as Aoa__read_sensor_majority__L_1__i
+  use Array__Int__Aoa__sensor_type as Array__Int__Aoa__sensor_type
+  use Aoa__read_sensor_majority__B_2__temp as Aoa__read_sensor_majority__B_2__temp
+  use Aoa__read_sensor_majority__B_2__minim as Aoa__read_sensor_majority__B_2__minim
+  use Aoa__read_sensor_majority__B_2__maxim as Aoa__read_sensor_majority__B_2__maxim
+  use Aoa__sensor_type as Aoa__sensor_type
+  use Aoa__sensor_type___axiom as Aoa__sensor_type___axiom
+  use Aoa__sensor_type__rep as Aoa__sensor_type__rep
+  use Array__Int__Aoa__sensor_type as Array__Int__Aoa__sensor_type
+  use Aoa__sensors_type___axiom as Aoa__sensors_type___axiom
+  use Aoa__read_sensor_majority__L_1 as Aoa__read_sensor_majority__L_1
+  use Array__Int__Aoa__sensor_type as Array__Int__Aoa__sensor_type
+  use Array__Int__Aoa__sensor_type as Array__Int__Aoa__sensor_type
+  use Aoa__read_sensor_majority__B_2__temp__aggregate_def as Aoa__read_sensor_majority__B_2__temp__aggregate_def
+  use Array__Int__Aoa__sensor_type as Array__Int__Aoa__sensor_type
+  use Standard__natural___axiom as Standard__natural___axiom
+  use Standard__integer___axiom as Standard__integer___axiom
+  use Aoa__read_sensor_majority__values___axiom as Aoa__read_sensor_majority__values___axiom
+  use Aoa__read_sensor_majority__defined_count___axiom as Aoa__read_sensor_majority__defined_count___axiom
+  use Aoa__read_sensor_majority__maj_v___axiom as Aoa__read_sensor_majority__maj_v___axiom
+  use Aoa__read_sensor_majority__L_1__i___axiom as Aoa__read_sensor_majority__L_1__i___axiom
+  use Aoa__read_sensor_majority__B_2__temp___axiom as Aoa__read_sensor_majority__B_2__temp___axiom
+  use Aoa__read_sensor_majority__B_2__temp__aggregate_def___axiom as Aoa__read_sensor_majority__B_2__temp__aggregate_def___axiom
+  use Aoa__read_sensor_majority__B_2__minim___axiom as Aoa__read_sensor_majority__B_2__minim___axiom
+  use Aoa__read_sensor_majority__B_2__maxim___axiom as Aoa__read_sensor_majority__B_2__maxim___axiom
+  use Aoa__read_sensor_majority__L_1___axiom as Aoa__read_sensor_majority__L_1___axiom
+  use Aoa__sensor_type___axiom as Aoa__sensor_type___axiom
+  use Aoa__sensors_type___axiom as Aoa__sensors_type___axiom
+  use Aoa__sensorstate___axiom as Aoa__sensorstate___axiom
+  
+  val aoa__read_sensor_majority__result : int__ref
+  
+  let def (__void_param : unit)
+    requires { [#"aoa.ads" 36 0 0] true }
+  = [@vc:divergent]
+    (([@GNAT-comment:Assume dynamic invariants of inputs of the subprogram aoa.ads:36]
+      ());
+     ([#"aoa.ads" 36 0 0]
+      assume {
+        [#"aoa.ads" 36 0 0]
+        (((((Aoa__sensors_type___axiom.dynamic_invariant
+               (Aoa__sensorstate.sensorstate.Array__Int__Aoa__sensor_type.map__content))
+              True)
+             False)
+            True)
+           True) });
+     ([@GNAT-comment:Assume moved pointers in outputs of the subprogram aoa.ads:36]
+      ());
+     ([@GNAT-comment:Check for RTE in the Pre of the subprogram aoa.ads:36]
+      ());
+     ([#"aoa.ads" 36 0 0] ());
+     ([@GNAT-comment:Assume Pre of the subprogram aoa.ads:36] ());
+     ([#"aoa.ads" 36 0 0]
+      (try
+         ([#"aoa.adb" 17 0 0] ());
+         ([#"aoa.adb" 17 0 0]
+          (([#"aoa.adb" 17 0 0]
+            (Aoa__read_sensor_majority__values.values.Array__Int__Aoa__sensor_type.map__content <-
+               (Aoa__sensorstate.sensorstate.Array__Int__Aoa__sensor_type.map__content)));
+           ([#"aoa.adb" 17 0 0]
+            assume {
+              [#"aoa.adb" 17 0 0]
+              (((((Aoa__sensors_type___axiom.dynamic_invariant
+                     (Aoa__read_sensor_majority__values.values.Array__Int__Aoa__sensor_type.map__content))
+                    True)
+                   False)
+                  True)
+                 True) })));
+         ([#"aoa.adb" 18 0 0]
+          (([#"aoa.adb" 18 0 0]
+            (Aoa__read_sensor_majority__defined_count.defined_count.int__content <-
+               (0 : int)));
+           ([#"aoa.adb" 18 0 0]
+            assume {
+              [#"aoa.adb" 18 0 0]
+              (((((Standard__natural___axiom.dynamic_invariant
+                     (Aoa__read_sensor_majority__defined_count.defined_count.int__content))
+                    True)
+                   False)
+                  True)
+                 True) })));
+         ([#"aoa.adb" 19 0 0]
+          (([#"aoa.adb" 19 0 0]
+            assume {
+              [#"aoa.adb" 19 0 0]
+              ((Aoa__sensor_type___axiom.default_initial_assumption
+                  (Aoa__read_sensor_majority__maj_v.maj_v.int__content))
+                 False) });
+           ([#"aoa.adb" 19 0 0]
+            assume {
+              [#"aoa.adb" 19 0 0]
+              (((((Aoa__sensor_type___axiom.dynamic_invariant
+                     (Aoa__read_sensor_majority__maj_v.maj_v.int__content))
+                    False)
+                   False)
+                  True)
+                 True) })));
+         ([#"aoa.adb" 21 0 0] ());
+         ([#"aoa.adb" 36 0 0] ());
+         ([@GP_Sloc:aoa.adb:21:34]
+          [#"aoa.adb" 21 0 0]
+          (let temp___200 = 1 : int in
+           let temp___201 = 3 : int in
+           ([@GNAT-comment:Translation of an unrolled Ada loop from aoa.adb:21]
+            ());
+           ([#"aoa.adb" 21 0 0]
+            (try
+               ([@GNAT-comment:Unrolling of the loop statements of loop aoa.adb:21]
+                ());
+               ([#"aoa.adb" 21 0 0]
+                (Aoa__read_sensor_majority__L_1__i.i.int__content <-
+                   (1 : int)));
+               ([@GP_Sloc:aoa.adb:22:13] [#"aoa.adb" 22 0 0] ());
+               ([@GP_Sloc:aoa.adb:22:10]
+                [#"aoa.adb" 22 0 0]
+                (if (([#"aoa.adb" 22 0 0]
+                      [#"aoa.adb" 22 0 0]
+                      (([@branch_id=890] Main.spark__branch).bool__content <-
+                         ((Aoa__sensor_type__rep.to_rep
+                             ((Array__Int__Aoa__sensor_type.get
+                                 (Aoa__read_sensor_majority__values.values.
+                                    Array__Int__Aoa__sensor_type.map__content))
+                                (Aoa__read_sensor_majority__L_1__i.i.int__content)))
+                            <> (61 : int))));
+                     (([@branch_id=890] Main.spark__branch).bool__content)) then
+                   (([@GP_Sloc:aoa.adb:23:13] [#"aoa.adb" 23 0 0] ());
+                    ([@GP_Sloc:aoa.adb:23:30] [#"aoa.adb" 23 0 0] ());
+                    ([@GP_Sloc:aoa.adb:23:27]
+                     [#"aoa.adb" 23 0 0]
+                     [#"aoa.adb" 23 0 0]
+                     (Aoa__read_sensor_majority__defined_count.defined_count.int__content <-
+                        ([#"aoa.adb" 23 0 0]
+                         [@GP_Sloc:aoa.adb:23:44]
+                         [@comment:            Defined_Count := Defined_Count + 1;                                            ^ aoa.adb:23:44:VC_OVERFLOW_CHECK]
+                         [@vc:annotation]
+                         [@GP_Reason:VC_OVERFLOW_CHECK]
+                         [@GP_Shape:L_1_while__if__defined_count_assign__add]
+                         [@GP_Id:0]
+                         (Standard__integer.range_check_
+                            ((Aoa__read_sensor_majority__defined_count.defined_count.int__content)
+                               + (1 : int)))))))
+                 else ()));
+               (Aoa__read_sensor_majority__L_1__i.i.int__content <- (2 : int));
+               ([@GP_Sloc:aoa.adb:22:13] [#"aoa.adb" 22 0 0] ());
+               ([@GP_Sloc:aoa.adb:22:10]
+                [#"aoa.adb" 22 0 0]
+                (if (([#"aoa.adb" 22 0 0]
+                      [#"aoa.adb" 22 0 0]
+                      (([@branch_id=890] Main.spark__branch).bool__content <-
+                         ((Aoa__sensor_type__rep.to_rep
+                             ((Array__Int__Aoa__sensor_type.get
+                                 (Aoa__read_sensor_majority__values.values.
+                                    Array__Int__Aoa__sensor_type.map__content))
+                                (Aoa__read_sensor_majority__L_1__i.i.int__content)))
+                            <> (61 : int))));
+                     (([@branch_id=890] Main.spark__branch).bool__content)) then
+                   (([@GP_Sloc:aoa.adb:23:13] [#"aoa.adb" 23 0 0] ());
+                    ([@GP_Sloc:aoa.adb:23:30] [#"aoa.adb" 23 0 0] ());
+                    ([@GP_Sloc:aoa.adb:23:27]
+                     [#"aoa.adb" 23 0 0]
+                     [#"aoa.adb" 23 0 0]
+                     (Aoa__read_sensor_majority__defined_count.defined_count.int__content <-
+                        ([#"aoa.adb" 23 0 0]
+                         [@GP_Sloc:aoa.adb:23:44]
+                         [@comment:            Defined_Count := Defined_Count + 1;                                            ^ aoa.adb:23:44:VC_OVERFLOW_CHECK]
+                         [@vc:annotation]
+                         [@GP_Reason:VC_OVERFLOW_CHECK]
+                         [@GP_Shape:L_1_while__if__defined_count_assign__add]
+                         [@GP_Id:0]
+                         (Standard__integer.range_check_
+                            ((Aoa__read_sensor_majority__defined_count.defined_count.int__content)
+                               + (1 : int)))))))
+                 else ()));
+               (Aoa__read_sensor_majority__L_1__i.i.int__content <- (3 : int));
+               ([@GP_Sloc:aoa.adb:22:13] [#"aoa.adb" 22 0 0] ());
+               ([@GP_Sloc:aoa.adb:22:10]
+                [#"aoa.adb" 22 0 0]
+                (if (([#"aoa.adb" 22 0 0]
+                      [#"aoa.adb" 22 0 0]
+                      (([@branch_id=890] Main.spark__branch).bool__content <-
+                         ((Aoa__sensor_type__rep.to_rep
+                             ((Array__Int__Aoa__sensor_type.get
+                                 (Aoa__read_sensor_majority__values.values.
+                                    Array__Int__Aoa__sensor_type.map__content))
+                                (Aoa__read_sensor_majority__L_1__i.i.int__content)))
+                            <> (61 : int))));
+                     (([@branch_id=890] Main.spark__branch).bool__content)) then
+                   (([@GP_Sloc:aoa.adb:23:13] [#"aoa.adb" 23 0 0] ());
+                    ([@GP_Sloc:aoa.adb:23:30] [#"aoa.adb" 23 0 0] ());
+                    ([@GP_Sloc:aoa.adb:23:27]
+                     [#"aoa.adb" 23 0 0]
+                     [#"aoa.adb" 23 0 0]
+                     (Aoa__read_sensor_majority__defined_count.defined_count.int__content <-
+                        ([#"aoa.adb" 23 0 0]
+                         [@GP_Sloc:aoa.adb:23:44]
+                         [@comment:            Defined_Count := Defined_Count + 1;                                            ^ aoa.adb:23:44:VC_OVERFLOW_CHECK]
+                         [@vc:annotation]
+                         [@GP_Reason:VC_OVERFLOW_CHECK]
+                         [@GP_Shape:L_1_while__if__defined_count_assign__add]
+                         [@GP_Id:0]
+                         (Standard__integer.range_check_
+                            ((Aoa__read_sensor_majority__defined_count.defined_count.int__content)
+                               + (1 : int)))))))
+                 else ()))
+             with Aoa__read_sensor_majority__L_1.L_1 -> ()
+             end))));
+         ([@GP_Sloc:aoa.adb:27:10] [#"aoa.adb" 27 0 0] ());
+         ([@GP_Sloc:aoa.adb:27:7]
+          [#"aoa.adb" 27 0 0]
+          (if (([#"aoa.adb" 27 0 0]
+                [#"aoa.adb" 27 0 0]
+                (([@branch_id=902] Main.spark__branch).bool__content <-
+                   ((Aoa__read_sensor_majority__defined_count.defined_count.int__content)
+                      = (0 : int))));
+               (([@branch_id=902] Main.spark__branch).bool__content)) then
+             ([@GP_Sloc:aoa.adb:28:10]
+              [#"aoa.adb" 28 0 0]
+              (([#"aoa.adb" 28 0 0]
+                (aoa__read_sensor_majority__result.int__content <- (61 : int)));
+               ([#"aoa.adb" 28 0 0] ((raise Return__exc) : unit))))
+           else ()));
+         ([@GP_Sloc:aoa.adb:31:10] [#"aoa.adb" 31 0 0] ());
+         ([@GP_Sloc:aoa.adb:31:22] [#"aoa.adb" 31 0 0] ());
+         ([@GP_Sloc:aoa.adb:31:7]
+          [#"aoa.adb" 31 0 0]
+          (if (([#"aoa.adb" 31 0 0]
+                [#"aoa.adb" 31 0 0]
+                (([@branch_id=908] Main.spark__branch).bool__content <-
+                   (((Aoa__sensor_type__rep.to_rep
+                        ((Array__Int__Aoa__sensor_type.get
+                            (Aoa__read_sensor_majority__values.values.
+                               Array__Int__Aoa__sensor_type.map__content))
+                           (1 : int)))
+                       = (Aoa__sensor_type__rep.to_rep
+                            ((Array__Int__Aoa__sensor_type.get
+                                (Aoa__read_sensor_majority__values.values.
+                                   Array__Int__Aoa__sensor_type.map__content))
+                               (2 : int))))
+                     ||
+                      ((Aoa__sensor_type__rep.to_rep
+                          ((Array__Int__Aoa__sensor_type.get
+                              (Aoa__read_sensor_majority__values.values.
+                                 Array__Int__Aoa__sensor_type.map__content))
+                             (1 : int)))
+                         = (Aoa__sensor_type__rep.to_rep
+                              ((Array__Int__Aoa__sensor_type.get
+                                  (Aoa__read_sensor_majority__values.values.
+                                     Array__Int__Aoa__sensor_type.map__content))
+                                 (3 : int)))))));
+               (([@branch_id=908] Main.spark__branch).bool__content)) then
+             (([@GP_Sloc:aoa.adb:32:10] [#"aoa.adb" 32 0 0] ());
+              ([@GP_Sloc:aoa.adb:32:19] [#"aoa.adb" 32 0 0] ());
+              ([@GP_Sloc:aoa.adb:32:16]
+               [#"aoa.adb" 32 0 0]
+               [#"aoa.adb" 32 0 0]
+               (Aoa__read_sensor_majority__maj_v.maj_v.int__content <-
+                  (Aoa__sensor_type__rep.to_rep
+                     ((Array__Int__Aoa__sensor_type.get
+                         (Aoa__read_sensor_majority__values.values.Array__Int__Aoa__sensor_type.map__content))
+                        (1 : int))))))
+           else
+             ([@GP_Sloc:aoa.adb:33:7]
+              (if (([#"aoa.adb" 33 0 0]
+                    [#"aoa.adb" 33 0 0]
+                    (([@branch_id=930] Main.spark__branch).bool__content <-
+                       ((Aoa__sensor_type__rep.to_rep
+                           ((Array__Int__Aoa__sensor_type.get
+                               (Aoa__read_sensor_majority__values.values.
+                                  Array__Int__Aoa__sensor_type.map__content))
+                              (2 : int)))
+                          = (Aoa__sensor_type__rep.to_rep
+                               ((Array__Int__Aoa__sensor_type.get
+                                   (Aoa__read_sensor_majority__values.values.
+                                      Array__Int__Aoa__sensor_type.map__content))
+                                  (3 : int))))));
+                   (([@branch_id=930] Main.spark__branch).bool__content)) then
+                 (([@GP_Sloc:aoa.adb:34:10] [#"aoa.adb" 34 0 0] ());
+                  ([@GP_Sloc:aoa.adb:34:19] [#"aoa.adb" 34 0 0] ());
+                  ([@GP_Sloc:aoa.adb:34:16]
+                   [#"aoa.adb" 34 0 0]
+                   [#"aoa.adb" 34 0 0]
+                   (Aoa__read_sensor_majority__maj_v.maj_v.int__content <-
+                      (Aoa__sensor_type__rep.to_rep
+                         ((Array__Int__Aoa__sensor_type.get
+                             (Aoa__read_sensor_majority__values.values.
+                                Array__Int__Aoa__sensor_type.map__content))
+                            (2 : int))))))
+               else
+                 ([@GP_Sloc:aoa.adb:36:10]
+                  [#"aoa.adb" 36 0 0]
+                  (([#"aoa.adb" 37 0 0] ());
+                   ([#"aoa.adb" 37 0 0] ());
+                   ([#"aoa.adb" 37 0 0] ());
+                   ([#"aoa.adb" 37 0 0]
+                    (([#"aoa.adb" 37 0 0]
+                      (Aoa__read_sensor_majority__B_2__temp.temp.Array__Int__Aoa__sensor_type.map__content <-
+                         (let temp___216 =
+                            ([#"aoa.adb" 37 0 0]
+                             (begin
+                                ensures { true }
+                                let _ = let _ = ((0 : int) = (1 : int)) in () in
+                                ()
+                              end));
+                            ([#"aoa.adb" 37 0 0]
+                             (begin
+                                ensures { true }
+                                let _ = let _ = ((0 : int) = (2 : int)) in () in
+                                ()
+                              end));
+                            ([#"aoa.adb" 37 0 0]
+                             (begin
+                                ensures { true }
+                                let _ = let _ = ((0 : int) = (3 : int)) in () in
+                                ()
+                              end));
+                            (((Aoa__read_sensor_majority__B_2__temp__aggregate_def.aoa__read_sensor_majority__B_2__temp__aggregate_def
+                                 (Aoa__sensor_type__rep.to_rep
+                                    ((Array__Int__Aoa__sensor_type.get
+                                        (Aoa__read_sensor_majority__values.values.
+                                           Array__Int__Aoa__sensor_type.map__content))
+                                       (1 : int))))
+                                (Aoa__sensor_type__rep.to_rep
+                                   ((Array__Int__Aoa__sensor_type.get
+                                       (Aoa__read_sensor_majority__values.values.
+                                          Array__Int__Aoa__sensor_type.map__content))
+                                      (2 : int))))
+                               (Aoa__sensor_type__rep.to_rep
+                                  ((Array__Int__Aoa__sensor_type.get
+                                      (Aoa__read_sensor_majority__values.values.
+                                         Array__Int__Aoa__sensor_type.map__content))
+                                     (3 : int)))) in
+                          temp___216)));
+                     ([#"aoa.adb" 37 0 0]
+                      assume {
+                        [#"aoa.adb" 37 0 0]
+                        (((((Aoa__sensors_type___axiom.dynamic_invariant
+                               (Aoa__read_sensor_majority__B_2__temp.temp.
+                                  Array__Int__Aoa__sensor_type.map__content))
+                              True)
+                             False)
+                            True)
+                           True) })));
+                   ([#"aoa.adb" 38 0 0]
+                    (([#"aoa.adb" 38 0 0]
+                      assume {
+                        [#"aoa.adb" 38 0 0]
+                        ((Aoa__sensor_type___axiom.default_initial_assumption
+                            (Aoa__read_sensor_majority__B_2__minim.minim.int__content))
+                           False) });
+                     ([#"aoa.adb" 38 0 0]
+                      assume {
+                        [#"aoa.adb" 38 0 0]
+                        (((((Aoa__sensor_type___axiom.dynamic_invariant
+                               (Aoa__read_sensor_majority__B_2__minim.minim.int__content))
+                              False)
+                             False)
+                            True)
+                           True) })));
+                   ([#"aoa.adb" 38 0 0]
+                    (([#"aoa.adb" 38 0 0]
+                      assume {
+                        [#"aoa.adb" 38 0 0]
+                        ((Aoa__sensor_type___axiom.default_initial_assumption
+                            (Aoa__read_sensor_majority__B_2__maxim.maxim.int__content))
+                           False) });
+                     ([#"aoa.adb" 38 0 0]
+                      assume {
+                        [#"aoa.adb" 38 0 0]
+                        (((((Aoa__sensor_type___axiom.dynamic_invariant
+                               (Aoa__read_sensor_majority__B_2__maxim.maxim.int__content))
+                              False)
+                             False)
+                            True)
+                           True) })));
+                   ([@GP_Sloc:aoa.adb:40:13] [#"aoa.adb" 40 0 0] ());
+                   ([@GP_Sloc:aoa.adb:40:22] [#"aoa.adb" 40 0 0] ());
+                   ([@GP_Sloc:aoa.adb:40:19]
+                    [#"aoa.adb" 40 0 0]
+                    [#"aoa.adb" 40 0 0]
+                    (Aoa__read_sensor_majority__B_2__minim.minim.int__content <-
+                       (Aoa__sensor_type__rep.to_rep
+                          ((Array__Int__Aoa__sensor_type.get
+                              (Aoa__read_sensor_majority__B_2__temp.temp.
+                                 Array__Int__Aoa__sensor_type.map__content))
+                             (1 : int)))));
+                   ([@GP_Sloc:aoa.adb:41:16] [#"aoa.adb" 41 0 0] ());
+                   ([@GP_Sloc:aoa.adb:41:26] [#"aoa.adb" 41 0 0] ());
+                   ([@GP_Sloc:aoa.adb:41:13]
+                    [#"aoa.adb" 41 0 0]
+                    (if (([#"aoa.adb" 41 0 0]
+                          [#"aoa.adb" 41 0 0]
+                          (([@branch_id=976] Main.spark__branch).bool__content <-
+                             ((Aoa__sensor_type__rep.to_rep
+                                 ((Array__Int__Aoa__sensor_type.get
+                                     (Aoa__read_sensor_majority__B_2__temp.temp.
+                                        Array__Int__Aoa__sensor_type.map__content))
+                                    (2 : int)))
+                                < (Aoa__read_sensor_majority__B_2__minim.minim.int__content))));
+                         (([@branch_id=976] Main.spark__branch).bool__content)) then
+                       (([@GP_Sloc:aoa.adb:42:16] [#"aoa.adb" 42 0 0] ());
+                        ([@GP_Sloc:aoa.adb:42:25] [#"aoa.adb" 42 0 0] ());
+                        ([@GP_Sloc:aoa.adb:42:22]
+                         [#"aoa.adb" 42 0 0]
+                         [#"aoa.adb" 42 0 0]
+                         (Aoa__read_sensor_majority__B_2__minim.minim.int__content <-
+                            (Aoa__sensor_type__rep.to_rep
+                               ((Array__Int__Aoa__sensor_type.get
+                                   (Aoa__read_sensor_majority__B_2__temp.temp.
+                                      Array__Int__Aoa__sensor_type.map__content))
+                                  (2 : int))))))
+                     else ()));
+                   ([@GP_Sloc:aoa.adb:44:16] [#"aoa.adb" 44 0 0] ());
+                   ([@GP_Sloc:aoa.adb:44:26] [#"aoa.adb" 44 0 0] ());
+                   ([@GP_Sloc:aoa.adb:44:13]
+                    [#"aoa.adb" 44 0 0]
+                    (if (([#"aoa.adb" 44 0 0]
+                          [#"aoa.adb" 44 0 0]
+                          (([@branch_id=987] Main.spark__branch).bool__content <-
+                             ((Aoa__sensor_type__rep.to_rep
+                                 ((Array__Int__Aoa__sensor_type.get
+                                     (Aoa__read_sensor_majority__B_2__temp.temp.
+                                        Array__Int__Aoa__sensor_type.map__content))
+                                    (3 : int)))
+                                < (Aoa__read_sensor_majority__B_2__minim.minim.int__content))));
+                         (([@branch_id=987] Main.spark__branch).bool__content)) then
+                       (([@GP_Sloc:aoa.adb:45:16] [#"aoa.adb" 45 0 0] ());
+                        ([@GP_Sloc:aoa.adb:45:25] [#"aoa.adb" 45 0 0] ());
+                        ([@GP_Sloc:aoa.adb:45:22]
+                         [#"aoa.adb" 45 0 0]
+                         [#"aoa.adb" 45 0 0]
+                         (Aoa__read_sensor_majority__B_2__minim.minim.int__content <-
+                            (Aoa__sensor_type__rep.to_rep
+                               ((Array__Int__Aoa__sensor_type.get
+                                   (Aoa__read_sensor_majority__B_2__temp.temp.
+                                      Array__Int__Aoa__sensor_type.map__content))
+                                  (3 : int))))))
+                     else ()));
+                   ([@GP_Sloc:aoa.adb:48:13] [#"aoa.adb" 48 0 0] ());
+                   ([@GP_Sloc:aoa.adb:48:22] [#"aoa.adb" 48 0 0] ());
+                   ([@GP_Sloc:aoa.adb:48:19]
+                    [#"aoa.adb" 48 0 0]
+                    [#"aoa.adb" 48 0 0]
+                    (Aoa__read_sensor_majority__B_2__maxim.maxim.int__content <-
+                       (Aoa__sensor_type__rep.to_rep
+                          ((Array__Int__Aoa__sensor_type.get
+                              (Aoa__read_sensor_majority__B_2__temp.temp.
+                                 Array__Int__Aoa__sensor_type.map__content))
+                             (1 : int)))));
+                   ([@GP_Sloc:aoa.adb:49:16] [#"aoa.adb" 49 0 0] ());
+                   ([@GP_Sloc:aoa.adb:49:26] [#"aoa.adb" 49 0 0] ());
+                   ([@GP_Sloc:aoa.adb:49:13]
+                    [#"aoa.adb" 49 0 0]
+                    (if (([#"aoa.adb" 49 0 0]
+                          [#"aoa.adb" 49 0 0]
+                          (([@branch_id=1004] Main.spark__branch).bool__content <-
+                             ((Aoa__sensor_type__rep.to_rep
+                                 ((Array__Int__Aoa__sensor_type.get
+                                     (Aoa__read_sensor_majority__B_2__temp.temp.
+                                        Array__Int__Aoa__sensor_type.map__content))
+                                    (2 : int)))
+                                > (Aoa__read_sensor_majority__B_2__maxim.maxim.int__content))));
+                         (([@branch_id=1004] Main.spark__branch).bool__content)) then
+                       (([@GP_Sloc:aoa.adb:50:16] [#"aoa.adb" 50 0 0] ());
+                        ([@GP_Sloc:aoa.adb:50:25] [#"aoa.adb" 50 0 0] ());
+                        ([@GP_Sloc:aoa.adb:50:22]
+                         [#"aoa.adb" 50 0 0]
+                         [#"aoa.adb" 50 0 0]
+                         (Aoa__read_sensor_majority__B_2__maxim.maxim.int__content <-
+                            (Aoa__sensor_type__rep.to_rep
+                               ((Array__Int__Aoa__sensor_type.get
+                                   (Aoa__read_sensor_majority__B_2__temp.temp.
+                                      Array__Int__Aoa__sensor_type.map__content))
+                                  (2 : int))))))
+                     else ()));
+                   ([@GP_Sloc:aoa.adb:52:16] [#"aoa.adb" 52 0 0] ());
+                   ([@GP_Sloc:aoa.adb:52:26] [#"aoa.adb" 52 0 0] ());
+                   ([@GP_Sloc:aoa.adb:52:13]
+                    [#"aoa.adb" 52 0 0]
+                    (if (([#"aoa.adb" 52 0 0]
+                          [#"aoa.adb" 52 0 0]
+                          (([@branch_id=1015] Main.spark__branch).bool__content <-
+                             ((Aoa__sensor_type__rep.to_rep
+                                 ((Array__Int__Aoa__sensor_type.get
+                                     (Aoa__read_sensor_majority__B_2__temp.temp.
+                                        Array__Int__Aoa__sensor_type.map__content))
+                                    (3 : int)))
+                                > (Aoa__read_sensor_majority__B_2__maxim.maxim.int__content))));
+                         (([@branch_id=1015] Main.spark__branch).bool__content)) then
+                       (([@GP_Sloc:aoa.adb:53:16] [#"aoa.adb" 53 0 0] ());
+                        ([@GP_Sloc:aoa.adb:53:25] [#"aoa.adb" 53 0 0] ());
+                        ([@GP_Sloc:aoa.adb:53:22]
+                         [#"aoa.adb" 53 0 0]
+                         [#"aoa.adb" 53 0 0]
+                         (Aoa__read_sensor_majority__B_2__maxim.maxim.int__content <-
+                            (Aoa__sensor_type__rep.to_rep
+                               ((Array__Int__Aoa__sensor_type.get
+                                   (Aoa__read_sensor_majority__B_2__temp.temp.
+                                      Array__Int__Aoa__sensor_type.map__content))
+                                  (3 : int))))))
+                     else ()));
+                   ([@GP_Sloc:aoa.adb:55:13] [#"aoa.adb" 55 0 0] ());
+                   ([@GP_Sloc:aoa.adb:55:22] [#"aoa.adb" 55 0 0] ());
+                   ([@GP_Sloc:aoa.adb:55:32] [#"aoa.adb" 55 0 0] ());
+                   ([@GP_Sloc:aoa.adb:55:43] [#"aoa.adb" 55 0 0] ());
+                   ([@GP_Sloc:aoa.adb:55:53] [#"aoa.adb" 55 0 0] ());
+                   ([@GP_Sloc:aoa.adb:55:61] [#"aoa.adb" 55 0 0] ());
+                   ([@GP_Sloc:aoa.adb:55:19]
+                    [#"aoa.adb" 55 0 0]
+                    [#"aoa.adb" 55 0 0]
+                    (Aoa__read_sensor_majority__maj_v.maj_v.int__content <-
+                       ([#"aoa.adb" 55 0 0]
+                        [@comment:            Maj_V := Temp(1) + Temp(2) +  Temp(3) - Minim - Maxim;                                                           ^ aoa.adb:55:59:VC_RANGE_CHECK]
+                        [@vc:annotation]
+                        [@GP_Reason:VC_RANGE_CHECK]
+                        [@GP_Shape:if__B_2_declblk__maj_v_assign__sub]
+                        [@GP_Id:1]
+                        [@GP_Sloc:aoa.adb:55:59]
+                        (Aoa__sensor_type.range_check_
+                           (((((Aoa__sensor_type__rep.to_rep
+                                  ((Array__Int__Aoa__sensor_type.get
+                                      (Aoa__read_sensor_majority__B_2__temp.temp.
+                                         Array__Int__Aoa__sensor_type.map__content))
+                                     (1 : int)))
+                                 + (Aoa__sensor_type__rep.to_rep
+                                      ((Array__Int__Aoa__sensor_type.get
+                                          (Aoa__read_sensor_majority__B_2__temp.temp.
+                                             Array__Int__Aoa__sensor_type.map__content))
+                                         (2 : int))))
+                                + (Aoa__sensor_type__rep.to_rep
+                                     ((Array__Int__Aoa__sensor_type.get
+                                         (Aoa__read_sensor_majority__B_2__temp.temp.
+                                            Array__Int__Aoa__sensor_type.map__content))
+                                        (3 : int))))
+                               - (Aoa__read_sensor_majority__B_2__minim.minim.int__content))
+                              - (Aoa__read_sensor_majority__B_2__maxim.maxim.int__content))))))))))));
+         ([@GP_Sloc:aoa.adb:58:14] [#"aoa.adb" 58 0 0] ());
+         ([@GP_Sloc:aoa.adb:58:7]
+          [#"aoa.adb" 58 0 0]
+          (([#"aoa.adb" 58 0 0]
+            (aoa__read_sensor_majority__result.int__content <-
+               (Aoa__read_sensor_majority__maj_v.maj_v.int__content)));
+           ([#"aoa.adb" 58 0 0] ((raise Return__exc) : unit))));
+         (raise Return__exc)
+       with Return__exc -> ()
+       end));
+     (aoa__read_sensor_majority__result.int__content))
+end

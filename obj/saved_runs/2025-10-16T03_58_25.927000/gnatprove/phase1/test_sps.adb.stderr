@@ -1,0 +1,2 @@
+spu.ads:19:08: error: global "AlarmCnt" is missing from input dependence list
+spu.ads:19:08: error: add "null => AlarmCnt" dependency to ignore this input

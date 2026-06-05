@@ -1,0 +1,15 @@
+{
+  "spark": [
+  ],
+  "flow": [
+  ],
+  "assumptions": [
+  ],
+  "timings": {
+    "globals (advanced)": 4.07067015767097E-02,
+    "flow analysis": 5.85999987379182E-05,
+    "marking": 3.08000016957521E-05,
+    "properties (advanced)": 2.73000005108770E-05,
+    "globals (basic)": 2.93827001005411E-02
+  }
+}

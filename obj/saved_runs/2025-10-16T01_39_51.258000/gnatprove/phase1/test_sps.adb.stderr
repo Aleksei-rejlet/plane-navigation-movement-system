@@ -1,0 +1,15 @@
+spu.ads:29:09: error: missing operand
+spu.ads:30:09: error: statement not allowed in package spec
+spu.ads:32:24: error: "=" should be ":="
+spu.ads:34:24: error: "=" should be ":="
+spu.ads:35:15: error: missing ";"
+spu.ads:36:04: error: no "if" for this "end if"
+spu.ads:37:03: error: statement expected
+spu.ads:40:32: error: "=" should be ":="
+spu.ads:42:32: error: "=" should be ":="
+spu.ads:43:15: error: missing ";"
+spu.ads:46:32: error: "=" should be ":="
+spu.ads:48:32: error: "=" should be ":="
+spu.ads:49:15: error: missing ";"
+spu.ads:50:05: error: no "if" for this "end if"
+spu.ads:54:01: error: "end if;" expected for "if" at line 38

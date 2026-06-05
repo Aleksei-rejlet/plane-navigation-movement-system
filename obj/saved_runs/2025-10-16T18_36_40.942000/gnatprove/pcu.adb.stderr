@@ -1,0 +1,4 @@
+pcu.adb:13:07: high: "AlarmCnt" must be listed in the Global aspect of "DisableAlarm" (SPARK RM 6.1.4(14))[#0]
+pcu.ads:22:30: warning: unused initial value of "AlarmCnt"[#1]
+pcu.ads:23:06: medium: missing dependency "null => AlarmCnt"[#3]
+pcu.ads:24:30: medium: incorrect dependency "AlarmCnt => AlarmCnt"[#2]

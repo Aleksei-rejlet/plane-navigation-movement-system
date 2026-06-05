@@ -1,0 +1,274 @@
+{
+  "spark": [
+    {
+      "name": "AoA",
+      "sloc": [
+        {
+          "file": "aoa.ads",
+          "line": 9
+        }
+      ],
+      "spark": "all"
+    },
+    {
+      "name": "AoA.Write_Sensors",
+      "sloc": [
+        {
+          "file": "aoa.ads",
+          "line": 24
+        }
+      ],
+      "spark": "all"
+    },
+    {
+      "name": "AoA.Read_Sensor",
+      "sloc": [
+        {
+          "file": "aoa.ads",
+          "line": 30
+        }
+      ],
+      "spark": "all"
+    },
+    {
+      "name": "AoA.Read_Sensor_Majority",
+      "sloc": [
+        {
+          "file": "aoa.ads",
+          "line": 36
+        }
+      ],
+      "spark": "all"
+    }
+  ],
+  "flow": [
+    {
+      "file": "aoa.ads",
+      "line": 32,
+      "col": 6,
+      "rule": "GLOBAL_WRONG",
+      "severity": "info",
+      "entity": {
+        "name": "AoA.Read_Sensor",
+        "sloc": [
+          {
+            "file": "aoa.ads",
+            "line": 30
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "how_proved": "flow"
+    },
+    {
+      "file": "aoa.ads",
+      "line": 33,
+      "col": 6,
+      "rule": "DEPENDS_WRONG",
+      "severity": "info",
+      "entity": {
+        "name": "AoA.Read_Sensor",
+        "sloc": [
+          {
+            "file": "aoa.ads",
+            "line": 30
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "how_proved": "flow"
+    },
+    {
+      "file": "aoa.ads",
+      "line": 26,
+      "col": 6,
+      "rule": "GLOBAL_WRONG",
+      "severity": "info",
+      "entity": {
+        "name": "AoA.Write_Sensors",
+        "sloc": [
+          {
+            "file": "aoa.ads",
+            "line": 24
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "how_proved": "flow"
+    },
+    {
+      "file": "aoa.ads",
+      "line": 27,
+      "col": 6,
+      "rule": "DEPENDS_WRONG",
+      "severity": "info",
+      "entity": {
+        "name": "AoA.Write_Sensors",
+        "sloc": [
+          {
+            "file": "aoa.ads",
+            "line": 24
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "how_proved": "flow"
+    },
+    {
+      "file": "aoa.adb",
+      "line": 38,
+      "col": 13,
+      "rule": "UNINITIALIZED",
+      "severity": "info",
+      "entity": {
+        "name": "AoA.Read_Sensor_Majority",
+        "sloc": [
+          {
+            "file": "aoa.ads",
+            "line": 36
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "how_proved": "flow"
+    },
+    {
+      "file": "aoa.adb",
+      "line": 38,
+      "col": 20,
+      "rule": "UNINITIALIZED",
+      "severity": "info",
+      "entity": {
+        "name": "AoA.Read_Sensor_Majority",
+        "sloc": [
+          {
+            "file": "aoa.ads",
+            "line": 36
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "how_proved": "flow"
+    },
+    {
+      "file": "aoa.adb",
+      "line": 19,
+      "col": 7,
+      "rule": "UNINITIALIZED",
+      "severity": "info",
+      "entity": {
+        "name": "AoA.Read_Sensor_Majority",
+        "sloc": [
+          {
+            "file": "aoa.ads",
+            "line": 36
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "how_proved": "flow"
+    },
+    {
+      "file": "aoa.ads",
+      "line": 38,
+      "col": 6,
+      "rule": "GLOBAL_WRONG",
+      "severity": "info",
+      "entity": {
+        "name": "AoA.Read_Sensor_Majority",
+        "sloc": [
+          {
+            "file": "aoa.ads",
+            "line": 36
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "how_proved": "flow"
+    },
+    {
+      "file": "aoa.ads",
+      "line": 39,
+      "col": 6,
+      "rule": "DEPENDS_WRONG",
+      "severity": "info",
+      "entity": {
+        "name": "AoA.Read_Sensor_Majority",
+        "sloc": [
+          {
+            "file": "aoa.ads",
+            "line": 36
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "how_proved": "flow"
+    }
+  ],
+  "assumptions": [
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_EFFECTS",
+        "arg": {
+          "name": "AoA.Write_Sensors",
+          "sloc": [
+            {
+              "file": "aoa.ads",
+              "line": 24
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_EFFECTS",
+        "arg": {
+          "name": "AoA.Read_Sensor",
+          "sloc": [
+            {
+              "file": "aoa.ads",
+              "line": 30
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_EFFECTS",
+        "arg": {
+          "name": "AoA.Read_Sensor_Majority",
+          "sloc": [
+            {
+              "file": "aoa.ads",
+              "line": 36
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "timings": {
+    "globals (advanced)": 6.68000022415072E-04,
+    "flow analysis": 5.40489982813597E-03,
+    "marking": 1.59100003656931E-04,
+    "properties (advanced)": 2.40000008489005E-05,
+    "globals (basic)": 6.30400027148426E-04
+  }
+}

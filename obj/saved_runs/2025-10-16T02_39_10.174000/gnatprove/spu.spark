@@ -1,0 +1,74 @@
+{
+  "spark": [
+    {
+      "name": "SPU",
+      "sloc": [
+        {
+          "file": "spu.ads",
+          "line": 6
+        }
+      ],
+      "spark": "all"
+    },
+    {
+      "name": "SPU.Controller",
+      "sloc": [
+        {
+          "file": "spu.ads",
+          "line": 14
+        }
+      ],
+      "spark": "all"
+    }
+  ],
+  "flow": [
+    {
+      "file": "spu.adb",
+      "line": 11,
+      "col": 15,
+      "rule": "GLOBAL_MISSING",
+      "severity": "high",
+      "entity": {
+        "name": "SPU.Controller",
+        "sloc": [
+          {
+            "file": "spu.ads",
+            "line": 14
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "msg_id": 0,
+      "how_proved": "flow"
+    },
+    {
+      "file": "spu.ads",
+      "line": 21,
+      "col": 8,
+      "rule": "DEPENDS_WRONG",
+      "severity": "info",
+      "entity": {
+        "name": "SPU.Controller",
+        "sloc": [
+          {
+            "file": "spu.ads",
+            "line": 14
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "how_proved": "flow"
+    }
+  ],
+  "assumptions": [
+  ],
+  "timings": {
+    "globals (advanced)": 2.09739990532398E-03,
+    "flow analysis": 3.17779998295009E-03,
+    "marking": 1.19399999675807E-04,
+    "properties (advanced)": 3.79000011889730E-05,
+    "globals (basic)": 9.94700007140636E-04
+  }
+}

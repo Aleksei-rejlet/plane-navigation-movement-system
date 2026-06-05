@@ -1,0 +1,11 @@
+spu.ads:24:30: error: global item must denote object, state or current instance of concurrent type
+spu.ads:24:35: error: global item must denote object, state or current instance of concurrent type
+spu.ads:24:40: error: global item must denote object, state or current instance of concurrent type
+spu.ads:30:08: error: global "Prev_Major" is missing from input dependence list
+spu.ads:30:08: error: add "null => Prev_Major" dependency to ignore this input
+spu.ads:30:36: error: item must denote parameter, variable, state or current instance of concurrent type
+spu.ads:31:36: error: item must denote parameter, variable, state or current instance of concurrent type
+spu.ads:32:36: error: item must denote parameter, variable, state or current instance of concurrent type
+spu.ads:32:41: error: item must denote parameter, variable, state or current instance of concurrent type
+spu.ads:32:46: error: item must denote parameter, variable, state or current instance of concurrent type
+compilation abandoned due to previous error

@@ -1,0 +1,131 @@
+{
+  "spark": [
+    {
+      "name": "SPU",
+      "sloc": [
+        {
+          "file": "spu.ads",
+          "line": 6
+        }
+      ],
+      "spark": "all"
+    },
+    {
+      "name": "SPU.Controller",
+      "sloc": [
+        {
+          "file": "spu.ads",
+          "line": 13
+        }
+      ],
+      "spark": "all"
+    }
+  ],
+  "flow": [
+    {
+      "file": "spu.ads",
+      "line": 20,
+      "col": 52,
+      "rule": "DEPENDS_WRONG",
+      "severity": "medium",
+      "entity": {
+        "name": "SPU.Controller",
+        "sloc": [
+          {
+            "file": "spu.ads",
+            "line": 13
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "msg_id": 0,
+      "how_proved": "flow"
+    },
+    {
+      "file": "spu.ads",
+      "line": 18,
+      "col": 32,
+      "rule": "UNINITIALIZED",
+      "severity": "info",
+      "entity": {
+        "name": "SPU.Controller",
+        "sloc": [
+          {
+            "file": "spu.ads",
+            "line": 13
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "how_proved": "flow"
+    },
+    {
+      "file": "spu.adb",
+      "line": 5,
+      "col": 7,
+      "rule": "UNINITIALIZED",
+      "severity": "info",
+      "entity": {
+        "name": "SPU.Controller",
+        "sloc": [
+          {
+            "file": "spu.ads",
+            "line": 13
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "how_proved": "flow"
+    },
+    {
+      "file": "spu.adb",
+      "line": 6,
+      "col": 7,
+      "rule": "UNINITIALIZED",
+      "severity": "info",
+      "entity": {
+        "name": "SPU.Controller",
+        "sloc": [
+          {
+            "file": "spu.ads",
+            "line": 13
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "how_proved": "flow"
+    },
+    {
+      "file": "spu.ads",
+      "line": 16,
+      "col": 8,
+      "rule": "GLOBAL_WRONG",
+      "severity": "info",
+      "entity": {
+        "name": "SPU.Controller",
+        "sloc": [
+          {
+            "file": "spu.ads",
+            "line": 13
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "how_proved": "flow"
+    }
+  ],
+  "assumptions": [
+  ],
+  "timings": {
+    "globals (advanced)": 2.71690008230507E-03,
+    "flow analysis": 4.83539979904890E-03,
+    "marking": 1.36400005430914E-04,
+    "properties (advanced)": 3.66999993275385E-05,
+    "globals (basic)": 1.31980003789067E-03
+  }
+}

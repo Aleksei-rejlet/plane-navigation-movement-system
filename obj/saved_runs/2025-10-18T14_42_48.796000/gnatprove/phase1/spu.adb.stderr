@@ -1,0 +1,2 @@
+spu.adb:15:29: error: "AlarmCnt" is not visible
+spu.adb:15:29: error: non-visible declaration at pcu.ads:13

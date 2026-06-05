@@ -1,0 +1,11 @@
+spu.adb:5:04: error: "Prev_ModeON" conflicts with declaration at spu.ads:7
+spu.adb:27:07: error: left hand side of assignment must be a variable
+spu.ads:6:26: error: "AoA" is undefined (more references follow)
+spu.ads:13:30: error: "PCU" is undefined (more references follow)
+spu.ads:13:45: error: duplicate global item
+spu.ads:13:66: error: duplicate global item
+spu.ads:13:76: error: "HSU" is undefined (more references follow)
+spu.ads:13:109: error: constant "Prev_Major" cannot act as output
+spu.ads:14:20: error: read-only constant "Prev_Major" cannot appear as output in dependence relation
+spu.ads:31:17: error: expected type "Standard.Boolean"
+spu.ads:31:17: error: found a composite type

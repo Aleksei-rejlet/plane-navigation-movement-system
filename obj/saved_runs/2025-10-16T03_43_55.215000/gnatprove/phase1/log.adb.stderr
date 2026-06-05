@@ -1,0 +1,4 @@
+spu.ads:18:08: error: global "Prev_Major" is missing from input dependence list
+spu.ads:18:08: error: add "null => Prev_Major" dependency to ignore this input
+spu.ads:19:37: error: global "AlarmON" cannot appear in dependence relation
+spu.ads:19:37: error: "AlarmON" is not part of the input or output set of subprogram "CONTROLLER"

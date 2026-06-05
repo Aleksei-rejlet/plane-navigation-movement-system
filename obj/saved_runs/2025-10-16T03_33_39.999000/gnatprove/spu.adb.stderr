@@ -1,0 +1,2 @@
+spu.adb:11:15: high: "AlarmON" must be listed in the Global aspect of "Controller" (SPARK RM 6.1.4(14))[#0]
+spu.adb:18:13: high: "TailplaneState" must be listed in the Global aspect of "Controller" (SPARK RM 6.1.4(14))[#1]

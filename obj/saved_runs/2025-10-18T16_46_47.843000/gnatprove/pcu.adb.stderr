@@ -1,0 +1,1 @@
+pcu.adb:10:31: medium: overflow check might fail [reason for check: result of addition must fit in a 32-bits machine integer] [possible fix: subprogram at pcu.ads:19 should mention AlarmCnt in a precondition][#0]

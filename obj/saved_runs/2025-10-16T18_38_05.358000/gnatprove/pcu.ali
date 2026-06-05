@@ -1,0 +1,72 @@
+V "GNAT Lib v2021"
+A -x
+A ada
+A -gnatA
+A -gnat2020
+A -gnatc
+P GP FX
+
+RN
+RV NO_IMPLEMENTATION_ASPECT_SPECIFICATIONS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_ELABORATION_CODE
+
+U pcu%b			pcu.adb			65b6a0bb OO PK IU
+
+U pcu%s			pcu.ads			52f7b4a6 EB OO PK IU
+
+D pcu.ads		20251014152350 52f7b4a6 pcu%s
+D pcu.adb		20251016143732 3741141d pcu%b
+D system.ads		20210520051134 2ffa5114 system%s
+G a Z
+X 1 pcu.ads
+7K10*PCU 79l5 79e8 2|2b14 61l5 61t8
+12b4*AlarmON{boolean} 21r30 23r18 29r29 30r18 35r26 36r43 2|6m7 12m7 18r14
+13i4*AlarmCnt{integer} 22r30 24r18 24r30 2|7m7 13m7
+14b4*ModeButtonPressed{boolean} 42r29 43r19 49r29 50r19 56r28 57r49 2|23m7
+. 28m7 33r14
+15b4*ModeON{boolean} 62r27 64r18 64r28 65r37 70r26 71r42 2|38r10 39m10 41m10
+. 43r26 50r14
+16b4*ModeIndicatorON{boolean} 63r27 65r18 76r26 77r51 2|43m7 55r14
+19U14*EnableAlarm 2|4b14 8l8 8t19
+27U14*DisableAlarm 2|10b14 14l8 14t20
+33V13*isEnabledAlarm{boolean} 36r18 2|16b13 19l8 19t22
+40U14*RecordModeButtonPressed 2|21b14 24l8 24t31
+47U14*RecordModeButtonNotPressed 2|26b14 29l8 29t34
+54V13*isModeButtonPressed{boolean} 57r19 2|31b13 34l8 34t27
+60U14*ToggleMode 2|36b14 46l8 46t18
+68V13*isEnabledMode{boolean} 71r18 2|48b13 51l8 51t21
+74V13*isEnabledModeIndicator{boolean} 77r18 2|53b13 56l8 56t30
+
+QQ SPARKVERSION SPARK Community 2021 (20210519)
+GG EK_DIRECT_CALLS pcu__enablealarm 0
+GG EK_GLOBALS pcu__enablealarm local FALSE E_PROCEDURE FALSE ORIGIN_FLOW 1 pcu proper_proof_in 0 proper_input 1 pcu__alarmcnt proper_output 2 pcu__alarmon pcu__alarmcnt refined_proof_in 0 refined_input 1 pcu__alarmcnt refined_output 2 pcu__alarmon pcu__alarmcnt calls_proof 0 calls 0 calls_conditional 0 FALSE FALSE FALSE TRUE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 2 pcu__alarmon pcu__alarmcnt LOCKS 0
+GG EK_DIRECT_CALLS pcu__disablealarm 0
+GG EK_GLOBALS pcu__disablealarm local FALSE E_PROCEDURE FALSE ORIGIN_FLOW 1 pcu proper_proof_in 0 proper_input 0 proper_output 1 pcu__alarmon refined_proof_in 0 refined_input 0 refined_output 1 pcu__alarmon calls_proof 0 calls 0 calls_conditional 0 FALSE FALSE FALSE TRUE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 2 pcu__alarmon pcu__alarmcnt LOCKS 0
+GG EK_DIRECT_CALLS pcu__isenabledalarm 0
+GG EK_GLOBALS pcu__isenabledalarm local FALSE E_FUNCTION FALSE ORIGIN_FLOW 1 pcu proper_proof_in 0 proper_input 1 pcu__alarmon proper_output 0 refined_proof_in 0 refined_input 1 pcu__alarmon refined_output 0 calls_proof 0 calls 0 calls_conditional 0 FALSE FALSE FALSE TRUE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 1 pcu__alarmon LOCKS 0
+GG EK_DIRECT_CALLS pcu__recordmodebuttonpressed 0
+GG EK_GLOBALS pcu__recordmodebuttonpressed local FALSE E_PROCEDURE FALSE ORIGIN_FLOW 1 pcu proper_proof_in 0 proper_input 0 proper_output 1 pcu__modebuttonpressed refined_proof_in 0 refined_input 0 refined_output 1 pcu__modebuttonpressed calls_proof 0 calls 0 calls_conditional 0 FALSE FALSE FALSE TRUE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 1 pcu__modebuttonpressed LOCKS 0
+GG EK_DIRECT_CALLS pcu__recordmodebuttonnotpressed 0
+GG EK_GLOBALS pcu__recordmodebuttonnotpressed local FALSE E_PROCEDURE FALSE ORIGIN_FLOW 1 pcu proper_proof_in 0 proper_input 0 proper_output 1 pcu__modebuttonpressed refined_proof_in 0 refined_input 0 refined_output 1 pcu__modebuttonpressed calls_proof 0 calls 0 calls_conditional 0 FALSE FALSE FALSE TRUE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 1 pcu__modebuttonpressed LOCKS 0
+GG EK_DIRECT_CALLS pcu__ismodebuttonpressed 0
+GG EK_GLOBALS pcu__ismodebuttonpressed local FALSE E_FUNCTION FALSE ORIGIN_FLOW 1 pcu proper_proof_in 0 proper_input 1 pcu__modebuttonpressed proper_output 0 refined_proof_in 0 refined_input 1 pcu__modebuttonpressed refined_output 0 calls_proof 0 calls 0 calls_conditional 0 FALSE FALSE FALSE TRUE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 1 pcu__modebuttonpressed LOCKS 0
+GG EK_DIRECT_CALLS pcu__togglemode 0
+GG EK_GLOBALS pcu__togglemode local FALSE E_PROCEDURE FALSE ORIGIN_FLOW 1 pcu proper_proof_in 0 proper_input 1 pcu__modeon proper_output 2 pcu__modeon pcu__modeindicatoron refined_proof_in 0 refined_input 1 pcu__modeon refined_output 2 pcu__modeon pcu__modeindicatoron calls_proof 0 calls 0 calls_conditional 0 FALSE FALSE FALSE TRUE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 2 pcu__modeon pcu__modeindicatoron LOCKS 0
+GG EK_DIRECT_CALLS pcu__isenabledmode 0
+GG EK_GLOBALS pcu__isenabledmode local FALSE E_FUNCTION FALSE ORIGIN_FLOW 1 pcu proper_proof_in 0 proper_input 1 pcu__modeon proper_output 0 refined_proof_in 0 refined_input 1 pcu__modeon refined_output 0 calls_proof 0 calls 0 calls_conditional 0 FALSE FALSE FALSE TRUE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 1 pcu__modeon LOCKS 0
+GG EK_DIRECT_CALLS pcu__isenabledmodeindicator 0
+GG EK_GLOBALS pcu__isenabledmodeindicator local FALSE E_FUNCTION FALSE ORIGIN_FLOW 1 pcu proper_proof_in 0 proper_input 1 pcu__modeindicatoron proper_output 0 refined_proof_in 0 refined_input 1 pcu__modeindicatoron refined_output 0 calls_proof 0 calls 0 calls_conditional 0 FALSE FALSE FALSE TRUE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 1 pcu__modeindicatoron LOCKS 0
+GG EK_DIRECT_CALLS pcu 0
+GG EK_GLOBALS pcu local FALSE E_PACKAGE TRUE ORIGIN_FLOW 0 proper_proof_in 0 proper_input 0 proper_output 0 refined_proof_in 0 refined_input 0 refined_output 0 initializes 0 refined_initializes 0 calls_proof 0 calls 0 calls_conditional 0 local_var 5 pcu__alarmon pcu__alarmcnt pcu__modebuttonpressed pcu__modeon pcu__modeindicatoron FALSE FALSE FALSE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
+GG EK_FLOW_SCOPE pcu__recordmodebuttonpressed FALSE FALSE FALSE FALSE TRUE pcu VISIBLE_PART
+GG EK_FLOW_SCOPE pcu__togglemode FALSE FALSE FALSE FALSE TRUE pcu VISIBLE_PART
+GG EK_FLOW_SCOPE pcu__disablealarm FALSE FALSE FALSE FALSE TRUE pcu VISIBLE_PART
+GG EK_FLOW_SCOPE pcu__recordmodebuttonnotpressed FALSE FALSE FALSE FALSE TRUE pcu VISIBLE_PART
+GG EK_FLOW_SCOPE pcu TRUE FALSE FALSE FALSE FALSE __standard
+GG EK_FLOW_SCOPE pcu__isenabledmode FALSE FALSE FALSE FALSE TRUE pcu VISIBLE_PART
+GG EK_FLOW_SCOPE pcu__isenabledalarm FALSE FALSE FALSE FALSE TRUE pcu VISIBLE_PART
+GG EK_FLOW_SCOPE pcu__ismodebuttonpressed FALSE FALSE FALSE FALSE TRUE pcu VISIBLE_PART
+GG EK_FLOW_SCOPE pcu__enablealarm FALSE FALSE FALSE FALSE TRUE pcu VISIBLE_PART
+GG EK_FLOW_SCOPE pcu__isenabledmodeindicator FALSE FALSE FALSE FALSE TRUE pcu VISIBLE_PART
+GG EK_END_MARKER

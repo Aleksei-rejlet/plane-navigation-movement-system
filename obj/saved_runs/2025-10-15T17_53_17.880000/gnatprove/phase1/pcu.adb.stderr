@@ -1,0 +1,9 @@
+pcu.adb:1:14: error: missing body for "EnableAlarm" declared at pcu.ads:19
+pcu.adb:1:14: error: missing body for "DisableAlarm" declared at pcu.ads:27
+pcu.adb:1:14: error: missing body for "isEnabledAlarm" declared at pcu.ads:33
+pcu.adb:1:14: error: missing body for "RecordModeButtonPressed" declared at pcu.ads:40
+pcu.adb:1:14: error: missing body for "RecordModeButtonNotPressed" declared at pcu.ads:47
+pcu.adb:1:14: error: missing body for "isModeButtonPressed" declared at pcu.ads:54
+pcu.adb:1:14: error: missing body for "ToggleMode" declared at pcu.ads:60
+pcu.adb:1:14: error: missing body for "isEnabledMode" declared at pcu.ads:68
+pcu.adb:1:14: error: missing body for "isEnabledModeIndicator" declared at pcu.ads:74

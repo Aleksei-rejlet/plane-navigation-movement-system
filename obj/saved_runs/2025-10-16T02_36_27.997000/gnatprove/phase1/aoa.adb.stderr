@@ -1,0 +1,3 @@
+aoa.adb:27:07: error: "V1" is undefined (more references follow)
+aoa.adb:28:07: error: "V2" is undefined (more references follow)
+aoa.adb:29:07: error: "V3" is undefined (more references follow)

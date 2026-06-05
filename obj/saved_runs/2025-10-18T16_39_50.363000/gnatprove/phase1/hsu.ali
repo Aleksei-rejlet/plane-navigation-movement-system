@@ -1,0 +1,59 @@
+V "GNAT Lib v2021"
+A -x
+A ada
+A -gnatA
+A -gnat2020
+A -gnatc
+P GP FX
+
+RN
+RV NO_IMPLEMENTATION_ASPECT_SPECIFICATIONS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_ELABORATION_CODE
+
+U hsu%b			hsu.adb			67dafd6b OO PK IU
+
+U hsu%s			hsu.ads			8e29cae1 EB OO PK IU
+
+D hsu.ads		20251016141516 8e29cae1 hsu%s
+D hsu.adb		20251018123912 e9f3378a hsu%b
+D system.ads		20210520051134 2ffa5114 system%s
+G a Z
+X 1 hsu.ads
+7K9*HSU 52l5 52e8 2|2b14 38l5 38t8
+12E9*Position 12e39 14r21
+12n22*UP{12E9} 2|7r25 22r31
+12n26*NORMAL{12E9} 2|17r25 32r31 36r22
+12n34*DOWN{12E9} 2|12r25 27r31
+14e4*TailplaneState{12E9} 19r27 20r18 25r27 26r18 31r27 32r18 37r26 38r42
+. 43r26 44r44 49r26 50r46 2|7m7 12m7 17m7 22r14 27r14 32r14 36m4
+17U14*TailplaneUP 2|5b14 8l8 8t19
+23U14*TailplaneDOWN 2|10b14 13l8 13t21
+29U14*TailplaneNORMAL 2|15b14 18l8 18t23
+35V13*isTailplaneUP{boolean} 38r18 2|20b13 23l8 23t21
+41V13*isTailplaneDOWN{boolean} 44r18 2|25b13 28l8 28t23
+47V13*isTailplaneNORMAL{boolean} 50r18 2|30b13 33l8 33t25
+
+QQ SPARKVERSION SPARK Community 2021 (20210519)
+GG EK_DIRECT_CALLS hsu__tailplaneup 0
+GG EK_GLOBALS hsu__tailplaneup local FALSE E_PROCEDURE FALSE ORIGIN_FLOW 1 hsu proper_proof_in 0 proper_input 0 proper_output 1 hsu__tailplanestate refined_proof_in 0 refined_input 0 refined_output 1 hsu__tailplanestate calls_proof 0 calls 0 calls_conditional 0 FALSE FALSE FALSE TRUE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 1 hsu__tailplanestate LOCKS 0
+GG EK_DIRECT_CALLS hsu__tailplanedown 0
+GG EK_GLOBALS hsu__tailplanedown local FALSE E_PROCEDURE FALSE ORIGIN_FLOW 1 hsu proper_proof_in 0 proper_input 0 proper_output 1 hsu__tailplanestate refined_proof_in 0 refined_input 0 refined_output 1 hsu__tailplanestate calls_proof 0 calls 0 calls_conditional 0 FALSE FALSE FALSE TRUE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 1 hsu__tailplanestate LOCKS 0
+GG EK_DIRECT_CALLS hsu__tailplanenormal 0
+GG EK_GLOBALS hsu__tailplanenormal local FALSE E_PROCEDURE FALSE ORIGIN_FLOW 1 hsu proper_proof_in 0 proper_input 0 proper_output 1 hsu__tailplanestate refined_proof_in 0 refined_input 0 refined_output 1 hsu__tailplanestate calls_proof 0 calls 0 calls_conditional 0 FALSE FALSE FALSE TRUE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 1 hsu__tailplanestate LOCKS 0
+GG EK_DIRECT_CALLS hsu__istailplaneup 0
+GG EK_GLOBALS hsu__istailplaneup local FALSE E_FUNCTION FALSE ORIGIN_FLOW 1 hsu proper_proof_in 0 proper_input 1 hsu__tailplanestate proper_output 0 refined_proof_in 0 refined_input 1 hsu__tailplanestate refined_output 0 calls_proof 0 calls 0 calls_conditional 0 FALSE FALSE FALSE TRUE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 1 hsu__tailplanestate LOCKS 0
+GG EK_DIRECT_CALLS hsu__istailplanedown 0
+GG EK_GLOBALS hsu__istailplanedown local FALSE E_FUNCTION FALSE ORIGIN_FLOW 1 hsu proper_proof_in 0 proper_input 1 hsu__tailplanestate proper_output 0 refined_proof_in 0 refined_input 1 hsu__tailplanestate refined_output 0 calls_proof 0 calls 0 calls_conditional 0 FALSE FALSE FALSE TRUE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 1 hsu__tailplanestate LOCKS 0
+GG EK_DIRECT_CALLS hsu__istailplanenormal 0
+GG EK_GLOBALS hsu__istailplanenormal local FALSE E_FUNCTION FALSE ORIGIN_FLOW 1 hsu proper_proof_in 0 proper_input 1 hsu__tailplanestate proper_output 0 refined_proof_in 0 refined_input 1 hsu__tailplanestate refined_output 0 calls_proof 0 calls 0 calls_conditional 0 FALSE FALSE FALSE TRUE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 1 hsu__tailplanestate LOCKS 0
+GG EK_DIRECT_CALLS hsu 0
+GG EK_GLOBALS hsu local FALSE E_PACKAGE TRUE ORIGIN_FLOW 0 proper_proof_in 0 proper_input 0 proper_output 0 refined_proof_in 0 refined_input 0 refined_output 0 initializes 1 hsu__tailplanestate refined_initializes 1 hsu__tailplanestate calls_proof 0 calls 0 calls_conditional 0 local_var 1 hsu__tailplanestate FALSE FALSE FALSE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
+GG EK_FLOW_SCOPE hsu__istailplaneup FALSE FALSE FALSE FALSE TRUE hsu VISIBLE_PART
+GG EK_FLOW_SCOPE hsu__tailplaneup FALSE FALSE FALSE FALSE TRUE hsu VISIBLE_PART
+GG EK_FLOW_SCOPE hsu__tailplanedown FALSE FALSE FALSE FALSE TRUE hsu VISIBLE_PART
+GG EK_FLOW_SCOPE hsu__istailplanedown FALSE FALSE FALSE FALSE TRUE hsu VISIBLE_PART
+GG EK_FLOW_SCOPE hsu__tailplanenormal FALSE FALSE FALSE FALSE TRUE hsu VISIBLE_PART
+GG EK_FLOW_SCOPE hsu TRUE FALSE FALSE FALSE FALSE __standard
+GG EK_FLOW_SCOPE hsu__istailplanenormal FALSE FALSE FALSE FALSE TRUE hsu VISIBLE_PART
+GG EK_END_MARKER

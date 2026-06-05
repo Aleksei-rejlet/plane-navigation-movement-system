@@ -1,0 +1,473 @@
+{
+  "spark": [
+    {
+      "name": "HSU",
+      "sloc": [
+        {
+          "file": "hsu.ads",
+          "line": 7
+        }
+      ],
+      "spark": "all"
+    },
+    {
+      "name": "HSU.TailplaneUP",
+      "sloc": [
+        {
+          "file": "hsu.ads",
+          "line": 17
+        }
+      ],
+      "spark": "all"
+    },
+    {
+      "name": "HSU.TailplaneDOWN",
+      "sloc": [
+        {
+          "file": "hsu.ads",
+          "line": 23
+        }
+      ],
+      "spark": "all"
+    },
+    {
+      "name": "HSU.TailplaneNORMAL",
+      "sloc": [
+        {
+          "file": "hsu.ads",
+          "line": 29
+        }
+      ],
+      "spark": "all"
+    },
+    {
+      "name": "HSU.isTailplaneUP",
+      "sloc": [
+        {
+          "file": "hsu.ads",
+          "line": 35
+        }
+      ],
+      "spark": "all"
+    },
+    {
+      "name": "HSU.isTailplaneDOWN",
+      "sloc": [
+        {
+          "file": "hsu.ads",
+          "line": 41
+        }
+      ],
+      "spark": "all"
+    },
+    {
+      "name": "HSU.isTailplaneNORMAL",
+      "sloc": [
+        {
+          "file": "hsu.ads",
+          "line": 47
+        }
+      ],
+      "spark": "all"
+    }
+  ],
+  "flow": [
+    {
+      "file": "hsu.ads",
+      "line": 37,
+      "col": 6,
+      "rule": "GLOBAL_WRONG",
+      "severity": "info",
+      "entity": {
+        "name": "HSU.isTailplaneUP",
+        "sloc": [
+          {
+            "file": "hsu.ads",
+            "line": 35
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "how_proved": "flow"
+    },
+    {
+      "file": "hsu.ads",
+      "line": 38,
+      "col": 6,
+      "rule": "DEPENDS_WRONG",
+      "severity": "info",
+      "entity": {
+        "name": "HSU.isTailplaneUP",
+        "sloc": [
+          {
+            "file": "hsu.ads",
+            "line": 35
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "how_proved": "flow"
+    },
+    {
+      "file": "hsu.ads",
+      "line": 19,
+      "col": 27,
+      "rule": "UNINITIALIZED",
+      "severity": "info",
+      "entity": {
+        "name": "HSU.TailplaneUP",
+        "sloc": [
+          {
+            "file": "hsu.ads",
+            "line": 17
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "how_proved": "flow"
+    },
+    {
+      "file": "hsu.ads",
+      "line": 19,
+      "col": 6,
+      "rule": "GLOBAL_WRONG",
+      "severity": "info",
+      "entity": {
+        "name": "HSU.TailplaneUP",
+        "sloc": [
+          {
+            "file": "hsu.ads",
+            "line": 17
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "how_proved": "flow"
+    },
+    {
+      "file": "hsu.ads",
+      "line": 20,
+      "col": 6,
+      "rule": "DEPENDS_WRONG",
+      "severity": "info",
+      "entity": {
+        "name": "HSU.TailplaneUP",
+        "sloc": [
+          {
+            "file": "hsu.ads",
+            "line": 17
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "how_proved": "flow"
+    },
+    {
+      "file": "hsu.ads",
+      "line": 25,
+      "col": 27,
+      "rule": "UNINITIALIZED",
+      "severity": "info",
+      "entity": {
+        "name": "HSU.TailplaneDOWN",
+        "sloc": [
+          {
+            "file": "hsu.ads",
+            "line": 23
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "how_proved": "flow"
+    },
+    {
+      "file": "hsu.ads",
+      "line": 25,
+      "col": 6,
+      "rule": "GLOBAL_WRONG",
+      "severity": "info",
+      "entity": {
+        "name": "HSU.TailplaneDOWN",
+        "sloc": [
+          {
+            "file": "hsu.ads",
+            "line": 23
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "how_proved": "flow"
+    },
+    {
+      "file": "hsu.ads",
+      "line": 26,
+      "col": 6,
+      "rule": "DEPENDS_WRONG",
+      "severity": "info",
+      "entity": {
+        "name": "HSU.TailplaneDOWN",
+        "sloc": [
+          {
+            "file": "hsu.ads",
+            "line": 23
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "how_proved": "flow"
+    },
+    {
+      "file": "hsu.ads",
+      "line": 43,
+      "col": 6,
+      "rule": "GLOBAL_WRONG",
+      "severity": "info",
+      "entity": {
+        "name": "HSU.isTailplaneDOWN",
+        "sloc": [
+          {
+            "file": "hsu.ads",
+            "line": 41
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "how_proved": "flow"
+    },
+    {
+      "file": "hsu.ads",
+      "line": 44,
+      "col": 6,
+      "rule": "DEPENDS_WRONG",
+      "severity": "info",
+      "entity": {
+        "name": "HSU.isTailplaneDOWN",
+        "sloc": [
+          {
+            "file": "hsu.ads",
+            "line": 41
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "how_proved": "flow"
+    },
+    {
+      "file": "hsu.ads",
+      "line": 31,
+      "col": 27,
+      "rule": "UNINITIALIZED",
+      "severity": "info",
+      "entity": {
+        "name": "HSU.TailplaneNORMAL",
+        "sloc": [
+          {
+            "file": "hsu.ads",
+            "line": 29
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "how_proved": "flow"
+    },
+    {
+      "file": "hsu.ads",
+      "line": 31,
+      "col": 6,
+      "rule": "GLOBAL_WRONG",
+      "severity": "info",
+      "entity": {
+        "name": "HSU.TailplaneNORMAL",
+        "sloc": [
+          {
+            "file": "hsu.ads",
+            "line": 29
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "how_proved": "flow"
+    },
+    {
+      "file": "hsu.ads",
+      "line": 32,
+      "col": 6,
+      "rule": "DEPENDS_WRONG",
+      "severity": "info",
+      "entity": {
+        "name": "HSU.TailplaneNORMAL",
+        "sloc": [
+          {
+            "file": "hsu.ads",
+            "line": 29
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "how_proved": "flow"
+    },
+    {
+      "file": "hsu.ads",
+      "line": 49,
+      "col": 6,
+      "rule": "GLOBAL_WRONG",
+      "severity": "info",
+      "entity": {
+        "name": "HSU.isTailplaneNORMAL",
+        "sloc": [
+          {
+            "file": "hsu.ads",
+            "line": 47
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "how_proved": "flow"
+    },
+    {
+      "file": "hsu.ads",
+      "line": 50,
+      "col": 6,
+      "rule": "DEPENDS_WRONG",
+      "severity": "info",
+      "entity": {
+        "name": "HSU.isTailplaneNORMAL",
+        "sloc": [
+          {
+            "file": "hsu.ads",
+            "line": 47
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "how_proved": "flow"
+    }
+  ],
+  "session_map": {
+  },
+  "proof": [
+  ],
+  "assumptions": [
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_EFFECTS",
+        "arg": {
+          "name": "HSU.TailplaneDOWN",
+          "sloc": [
+            {
+              "file": "hsu.ads",
+              "line": 23
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_EFFECTS",
+        "arg": {
+          "name": "HSU.isTailplaneDOWN",
+          "sloc": [
+            {
+              "file": "hsu.ads",
+              "line": 41
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_EFFECTS",
+        "arg": {
+          "name": "HSU.TailplaneNORMAL",
+          "sloc": [
+            {
+              "file": "hsu.ads",
+              "line": 29
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_EFFECTS",
+        "arg": {
+          "name": "HSU.isTailplaneUP",
+          "sloc": [
+            {
+              "file": "hsu.ads",
+              "line": 35
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_EFFECTS",
+        "arg": {
+          "name": "HSU.TailplaneUP",
+          "sloc": [
+            {
+              "file": "hsu.ads",
+              "line": 17
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_EFFECTS",
+        "arg": {
+          "name": "HSU.isTailplaneNORMAL",
+          "sloc": [
+            {
+              "file": "hsu.ads",
+              "line": 47
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "timings": {
+    "codepeer results": 2.44900002144277E-04,
+    "init_why_sections": 8.78599996212870E-04,
+    "globals (advanced)": 6.81100005749613E-04,
+    "flow analysis": 4.02909982949495E-03,
+    "marking": 5.12000005983282E-05,
+    "translation of standard": 5.13050006702542E-03,
+    "properties (advanced)": 1.80000006366754E-05,
+    "globals (basic)": 5.68000017665327E-04
+  }
+}

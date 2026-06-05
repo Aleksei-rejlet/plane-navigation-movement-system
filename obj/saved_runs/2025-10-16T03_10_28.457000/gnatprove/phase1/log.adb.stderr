@@ -1,0 +1,4 @@
+spu.ads:18:08: error: global "Prev_ModeOn" is missing from input dependence list
+spu.ads:18:08: error: add "null => Prev_ModeOn" dependency to ignore this input
+spu.ads:21:20: error: null output list must be the last clause in a dependency relation
+spu.ads:22:20: error: multiple null dependency relations not allowed

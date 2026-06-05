@@ -1,0 +1,2 @@
+spu.ads:18:08: error: global "Prev_Major" is missing from input dependence list
+spu.ads:18:08: error: add "null => Prev_Major" dependency to ignore this input

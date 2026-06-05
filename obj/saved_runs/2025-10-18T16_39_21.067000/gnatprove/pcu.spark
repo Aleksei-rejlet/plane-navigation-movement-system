@@ -1,0 +1,910 @@
+{
+  "spark": [
+    {
+      "name": "PCU",
+      "sloc": [
+        {
+          "file": "pcu.ads",
+          "line": 7
+        }
+      ],
+      "spark": "all"
+    },
+    {
+      "name": "PCU.EnableAlarm",
+      "sloc": [
+        {
+          "file": "pcu.ads",
+          "line": 19
+        }
+      ],
+      "spark": "all"
+    },
+    {
+      "name": "PCU.DisableAlarm",
+      "sloc": [
+        {
+          "file": "pcu.ads",
+          "line": 27
+        }
+      ],
+      "spark": "all"
+    },
+    {
+      "name": "PCU.isEnabledAlarm",
+      "sloc": [
+        {
+          "file": "pcu.ads",
+          "line": 33
+        }
+      ],
+      "spark": "all"
+    },
+    {
+      "name": "PCU.RecordModeButtonPressed",
+      "sloc": [
+        {
+          "file": "pcu.ads",
+          "line": 40
+        }
+      ],
+      "spark": "all"
+    },
+    {
+      "name": "PCU.RecordModeButtonNotPressed",
+      "sloc": [
+        {
+          "file": "pcu.ads",
+          "line": 47
+        }
+      ],
+      "spark": "all"
+    },
+    {
+      "name": "PCU.isModeButtonPressed",
+      "sloc": [
+        {
+          "file": "pcu.ads",
+          "line": 54
+        }
+      ],
+      "spark": "all"
+    },
+    {
+      "name": "PCU.ToggleMode",
+      "sloc": [
+        {
+          "file": "pcu.ads",
+          "line": 60
+        }
+      ],
+      "spark": "all"
+    },
+    {
+      "name": "PCU.isEnabledMode",
+      "sloc": [
+        {
+          "file": "pcu.ads",
+          "line": 68
+        }
+      ],
+      "spark": "all"
+    },
+    {
+      "name": "PCU.isEnabledModeIndicator",
+      "sloc": [
+        {
+          "file": "pcu.ads",
+          "line": 74
+        }
+      ],
+      "spark": "all"
+    }
+  ],
+  "flow": [
+    {
+      "file": "pcu.ads",
+      "line": 76,
+      "col": 6,
+      "rule": "GLOBAL_WRONG",
+      "severity": "info",
+      "entity": {
+        "name": "PCU.isEnabledModeIndicator",
+        "sloc": [
+          {
+            "file": "pcu.ads",
+            "line": 74
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "how_proved": "flow"
+    },
+    {
+      "file": "pcu.ads",
+      "line": 77,
+      "col": 6,
+      "rule": "DEPENDS_WRONG",
+      "severity": "info",
+      "entity": {
+        "name": "PCU.isEnabledModeIndicator",
+        "sloc": [
+          {
+            "file": "pcu.ads",
+            "line": 74
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "how_proved": "flow"
+    },
+    {
+      "file": "pcu.ads",
+      "line": 42,
+      "col": 29,
+      "rule": "UNINITIALIZED",
+      "severity": "info",
+      "entity": {
+        "name": "PCU.RecordModeButtonPressed",
+        "sloc": [
+          {
+            "file": "pcu.ads",
+            "line": 40
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "how_proved": "flow"
+    },
+    {
+      "file": "pcu.ads",
+      "line": 42,
+      "col": 7,
+      "rule": "GLOBAL_WRONG",
+      "severity": "info",
+      "entity": {
+        "name": "PCU.RecordModeButtonPressed",
+        "sloc": [
+          {
+            "file": "pcu.ads",
+            "line": 40
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "how_proved": "flow"
+    },
+    {
+      "file": "pcu.ads",
+      "line": 43,
+      "col": 7,
+      "rule": "DEPENDS_WRONG",
+      "severity": "info",
+      "entity": {
+        "name": "PCU.RecordModeButtonPressed",
+        "sloc": [
+          {
+            "file": "pcu.ads",
+            "line": 40
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "how_proved": "flow"
+    },
+    {
+      "file": "pcu.ads",
+      "line": 63,
+      "col": 27,
+      "rule": "UNINITIALIZED",
+      "severity": "info",
+      "entity": {
+        "name": "PCU.ToggleMode",
+        "sloc": [
+          {
+            "file": "pcu.ads",
+            "line": 60
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "how_proved": "flow"
+    },
+    {
+      "file": "pcu.ads",
+      "line": 62,
+      "col": 6,
+      "rule": "GLOBAL_WRONG",
+      "severity": "info",
+      "entity": {
+        "name": "PCU.ToggleMode",
+        "sloc": [
+          {
+            "file": "pcu.ads",
+            "line": 60
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "how_proved": "flow"
+    },
+    {
+      "file": "pcu.ads",
+      "line": 64,
+      "col": 6,
+      "rule": "DEPENDS_WRONG",
+      "severity": "info",
+      "entity": {
+        "name": "PCU.ToggleMode",
+        "sloc": [
+          {
+            "file": "pcu.ads",
+            "line": 60
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "how_proved": "flow"
+    },
+    {
+      "file": "pcu.ads",
+      "line": 29,
+      "col": 29,
+      "rule": "UNINITIALIZED",
+      "severity": "info",
+      "entity": {
+        "name": "PCU.DisableAlarm",
+        "sloc": [
+          {
+            "file": "pcu.ads",
+            "line": 27
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "how_proved": "flow"
+    },
+    {
+      "file": "pcu.ads",
+      "line": 29,
+      "col": 6,
+      "rule": "GLOBAL_WRONG",
+      "severity": "info",
+      "entity": {
+        "name": "PCU.DisableAlarm",
+        "sloc": [
+          {
+            "file": "pcu.ads",
+            "line": 27
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "how_proved": "flow"
+    },
+    {
+      "file": "pcu.ads",
+      "line": 30,
+      "col": 6,
+      "rule": "DEPENDS_WRONG",
+      "severity": "info",
+      "entity": {
+        "name": "PCU.DisableAlarm",
+        "sloc": [
+          {
+            "file": "pcu.ads",
+            "line": 27
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "how_proved": "flow"
+    },
+    {
+      "file": "pcu.ads",
+      "line": 49,
+      "col": 29,
+      "rule": "UNINITIALIZED",
+      "severity": "info",
+      "entity": {
+        "name": "PCU.RecordModeButtonNotPressed",
+        "sloc": [
+          {
+            "file": "pcu.ads",
+            "line": 47
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "how_proved": "flow"
+    },
+    {
+      "file": "pcu.ads",
+      "line": 49,
+      "col": 7,
+      "rule": "GLOBAL_WRONG",
+      "severity": "info",
+      "entity": {
+        "name": "PCU.RecordModeButtonNotPressed",
+        "sloc": [
+          {
+            "file": "pcu.ads",
+            "line": 47
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "how_proved": "flow"
+    },
+    {
+      "file": "pcu.ads",
+      "line": 50,
+      "col": 7,
+      "rule": "DEPENDS_WRONG",
+      "severity": "info",
+      "entity": {
+        "name": "PCU.RecordModeButtonNotPressed",
+        "sloc": [
+          {
+            "file": "pcu.ads",
+            "line": 47
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "how_proved": "flow"
+    },
+    {
+      "file": "pcu.ads",
+      "line": 70,
+      "col": 6,
+      "rule": "GLOBAL_WRONG",
+      "severity": "info",
+      "entity": {
+        "name": "PCU.isEnabledMode",
+        "sloc": [
+          {
+            "file": "pcu.ads",
+            "line": 68
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "how_proved": "flow"
+    },
+    {
+      "file": "pcu.ads",
+      "line": 71,
+      "col": 6,
+      "rule": "DEPENDS_WRONG",
+      "severity": "info",
+      "entity": {
+        "name": "PCU.isEnabledMode",
+        "sloc": [
+          {
+            "file": "pcu.ads",
+            "line": 68
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "how_proved": "flow"
+    },
+    {
+      "file": "pcu.ads",
+      "line": 35,
+      "col": 6,
+      "rule": "GLOBAL_WRONG",
+      "severity": "info",
+      "entity": {
+        "name": "PCU.isEnabledAlarm",
+        "sloc": [
+          {
+            "file": "pcu.ads",
+            "line": 33
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "how_proved": "flow"
+    },
+    {
+      "file": "pcu.ads",
+      "line": 36,
+      "col": 6,
+      "rule": "DEPENDS_WRONG",
+      "severity": "info",
+      "entity": {
+        "name": "PCU.isEnabledAlarm",
+        "sloc": [
+          {
+            "file": "pcu.ads",
+            "line": 33
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "how_proved": "flow"
+    },
+    {
+      "file": "pcu.ads",
+      "line": 56,
+      "col": 7,
+      "rule": "GLOBAL_WRONG",
+      "severity": "info",
+      "entity": {
+        "name": "PCU.isModeButtonPressed",
+        "sloc": [
+          {
+            "file": "pcu.ads",
+            "line": 54
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "how_proved": "flow"
+    },
+    {
+      "file": "pcu.ads",
+      "line": 57,
+      "col": 7,
+      "rule": "DEPENDS_WRONG",
+      "severity": "info",
+      "entity": {
+        "name": "PCU.isModeButtonPressed",
+        "sloc": [
+          {
+            "file": "pcu.ads",
+            "line": 54
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "how_proved": "flow"
+    },
+    {
+      "file": "pcu.ads",
+      "line": 21,
+      "col": 30,
+      "rule": "UNINITIALIZED",
+      "severity": "info",
+      "entity": {
+        "name": "PCU.EnableAlarm",
+        "sloc": [
+          {
+            "file": "pcu.ads",
+            "line": 19
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "how_proved": "flow"
+    },
+    {
+      "file": "pcu.ads",
+      "line": 21,
+      "col": 6,
+      "rule": "GLOBAL_WRONG",
+      "severity": "info",
+      "entity": {
+        "name": "PCU.EnableAlarm",
+        "sloc": [
+          {
+            "file": "pcu.ads",
+            "line": 19
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "how_proved": "flow"
+    },
+    {
+      "file": "pcu.ads",
+      "line": 23,
+      "col": 6,
+      "rule": "DEPENDS_WRONG",
+      "severity": "info",
+      "entity": {
+        "name": "PCU.EnableAlarm",
+        "sloc": [
+          {
+            "file": "pcu.ads",
+            "line": 19
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "how_proved": "flow"
+    }
+  ],
+  "session_map": {
+    " 1": "C:\\GNAT\\2021\\bin\\Mycw1\\obj\\gnatprove\\pcu__enablealarm"
+  },
+  "proof": [
+    {
+      "file": "pcu.adb",
+      "line": 10,
+      "col": 31,
+      "rule": "VC_OVERFLOW_CHECK",
+      "severity": "info",
+      "entity": {
+        "name": "PCU.EnableAlarm",
+        "sloc": [
+          {
+            "file": "pcu.ads",
+            "line": 19
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 1,
+              "time": 0
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "pcu.adb",
+      "check_line": 10,
+      "check_col": 31,
+      "session_dir": 1,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 1,
+          "max_steps": 1,
+          "max_time": 0.00000000000000E+00
+        }
+      }
+    }
+  ],
+  "assumptions": [
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_AORTE",
+        "arg": {
+          "name": "PCU.EnableAlarm",
+          "sloc": [
+            {
+              "file": "pcu.ads",
+              "line": 19
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_EFFECTS",
+        "arg": {
+          "name": "PCU.isEnabledAlarm",
+          "sloc": [
+            {
+              "file": "pcu.ads",
+              "line": 33
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_AORTE",
+        "arg": {
+          "name": "PCU.isEnabledAlarm",
+          "sloc": [
+            {
+              "file": "pcu.ads",
+              "line": 33
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_EFFECTS",
+        "arg": {
+          "name": "PCU.isModeButtonPressed",
+          "sloc": [
+            {
+              "file": "pcu.ads",
+              "line": 54
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_AORTE",
+        "arg": {
+          "name": "PCU.isModeButtonPressed",
+          "sloc": [
+            {
+              "file": "pcu.ads",
+              "line": 54
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_EFFECTS",
+        "arg": {
+          "name": "PCU.isEnabledModeIndicator",
+          "sloc": [
+            {
+              "file": "pcu.ads",
+              "line": 74
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_AORTE",
+        "arg": {
+          "name": "PCU.isEnabledModeIndicator",
+          "sloc": [
+            {
+              "file": "pcu.ads",
+              "line": 74
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_AORTE",
+        "arg": {
+          "name": "PCU",
+          "sloc": [
+            {
+              "file": "pcu.ads",
+              "line": 7
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_EFFECTS",
+        "arg": {
+          "name": "PCU.isEnabledMode",
+          "sloc": [
+            {
+              "file": "pcu.ads",
+              "line": 68
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_AORTE",
+        "arg": {
+          "name": "PCU.isEnabledMode",
+          "sloc": [
+            {
+              "file": "pcu.ads",
+              "line": 68
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_EFFECTS",
+        "arg": {
+          "name": "PCU.RecordModeButtonPressed",
+          "sloc": [
+            {
+              "file": "pcu.ads",
+              "line": 40
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_AORTE",
+        "arg": {
+          "name": "PCU.RecordModeButtonPressed",
+          "sloc": [
+            {
+              "file": "pcu.ads",
+              "line": 40
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_EFFECTS",
+        "arg": {
+          "name": "PCU.DisableAlarm",
+          "sloc": [
+            {
+              "file": "pcu.ads",
+              "line": 27
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_AORTE",
+        "arg": {
+          "name": "PCU.DisableAlarm",
+          "sloc": [
+            {
+              "file": "pcu.ads",
+              "line": 27
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_EFFECTS",
+        "arg": {
+          "name": "PCU.ToggleMode",
+          "sloc": [
+            {
+              "file": "pcu.ads",
+              "line": 60
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_AORTE",
+        "arg": {
+          "name": "PCU.ToggleMode",
+          "sloc": [
+            {
+              "file": "pcu.ads",
+              "line": 60
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_EFFECTS",
+        "arg": {
+          "name": "PCU.RecordModeButtonNotPressed",
+          "sloc": [
+            {
+              "file": "pcu.ads",
+              "line": 47
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_AORTE",
+        "arg": {
+          "name": "PCU.RecordModeButtonNotPressed",
+          "sloc": [
+            {
+              "file": "pcu.ads",
+              "line": 47
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_EFFECTS",
+        "arg": {
+          "name": "PCU.EnableAlarm",
+          "sloc": [
+            {
+              "file": "pcu.ads",
+              "line": 19
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "timings": {
+    "codepeer results": 7.53899978008121E-04,
+    "init_why_sections": 1.04070000816137E-03,
+    "gnatwhy3.run_vcs": 0.00000000000000E+00,
+    "globals (advanced)": 1.13660003989935E-03,
+    "flow analysis": 8.22080019861460E-03,
+    "marking": 1.09499997051898E-04,
+    "translation of standard": 7.53229996189475E-03,
+    "properties (advanced)": 2.99000002996763E-05,
+    "gnatwhy3.register_vcs": 1.56250000000000E-02,
+    "globals (basic)": 5.27900003362447E-04,
+    "gnatwhy3.schedule_vcs": 0.00000000000000E+00,
+    "gnatwhy3.save_session": 0.00000000000000E+00,
+    "gnatwhy3.init": 2.34375000000000E-01
+  }
+}

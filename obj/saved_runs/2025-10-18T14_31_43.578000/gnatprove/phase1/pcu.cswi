@@ -1,0 +1,8 @@
+20251018103144
+-c
+-x
+ada
+-gnatA
+-gnat2020
+-gnatc
+-gnates=C:\GNAT\2021\bin\Mycw1\obj\gnatprove\aa176a6a.tmp

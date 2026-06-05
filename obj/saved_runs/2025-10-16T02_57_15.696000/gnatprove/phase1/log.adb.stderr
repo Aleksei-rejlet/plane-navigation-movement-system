@@ -1,0 +1,3 @@
+spu.ads:22:08: error: global "AlarmON" is missing from input dependence list
+spu.ads:22:08: error: add "null => AlarmON" dependency to ignore this input
+spu.ads:24:23: error: read-only global "AlarmCnt" cannot appear as output in dependence relation

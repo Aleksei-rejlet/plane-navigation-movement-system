@@ -1,0 +1,18 @@
+spu.ads:28:19: error: expected type universal integer
+spu.ads:28:19: error: found type "Sensors_Type" defined at aoa.ads:19
+spu.ads:30:28: error: expected type "Standard.Integer"
+spu.ads:30:28: error: found type "Sensors_Type" defined at aoa.ads:19
+spu.ads:35:19: error: expected type universal integer
+spu.ads:35:19: error: found type "Sensors_Type" defined at aoa.ads:19
+spu.ads:37:27: error: expected type "Standard.Integer"
+spu.ads:37:27: error: found type "Sensors_Type" defined at aoa.ads:19
+spu.ads:43:28: error: expected type universal integer
+spu.ads:43:28: error: found type "Sensors_Type" defined at aoa.ads:19
+spu.ads:44:37: error: operator for type "Position" defined at hsu.ads:12 is not directly visible
+spu.ads:44:37: error: use clause would make operation legal
+spu.ads:49:28: error: expected type universal integer
+spu.ads:49:28: error: found type "Sensors_Type" defined at aoa.ads:19
+spu.ads:50:37: error: operator for type "Position" defined at hsu.ads:12 is not directly visible
+spu.ads:50:37: error: use clause would make operation legal
+spu.ads:56:37: error: operator for type "Position" defined at hsu.ads:12 is not directly visible
+spu.ads:56:37: error: use clause would make operation legal

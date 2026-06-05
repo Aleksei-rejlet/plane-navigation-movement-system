@@ -1,0 +1,2 @@
+spu.ads:18:29: error: "AlarmON" is not visible
+spu.ads:18:29: error: non-visible declaration at pcu.ads:12

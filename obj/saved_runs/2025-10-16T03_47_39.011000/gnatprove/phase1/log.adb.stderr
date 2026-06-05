@@ -1,0 +1,2 @@
+spu.ads:18:32: error: duplicate global item
+spu.ads:19:08: error: global "AlarmON" is missing from output dependence list

@@ -1,0 +1,4 @@
+spu.adb:15:26: error: "=" should be ":="
+spu.adb:17:17: error: "elsif" cannot appear after "else"
+spu.adb:17:28: error: missing ";"
+spu.adb:34:03: error: missing "end if;" for "if" at line 12

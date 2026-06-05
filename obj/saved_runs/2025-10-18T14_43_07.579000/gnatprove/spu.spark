@@ -1,0 +1,359 @@
+{
+  "spark": [
+    {
+      "name": "SPU",
+      "sloc": [
+        {
+          "file": "spu.ads",
+          "line": 6
+        }
+      ],
+      "spark": "all"
+    },
+    {
+      "name": "SPU.Controller",
+      "sloc": [
+        {
+          "file": "spu.ads",
+          "line": 13
+        }
+      ],
+      "spark": "all"
+    }
+  ],
+  "flow": [
+    {
+      "file": "spu.ads",
+      "line": 20,
+      "col": 48,
+      "rule": "DEPENDS_WRONG",
+      "severity": "medium",
+      "entity": {
+        "name": "SPU.Controller",
+        "sloc": [
+          {
+            "file": "spu.ads",
+            "line": 13
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "msg_id": 0,
+      "how_proved": "flow"
+    },
+    {
+      "file": "spu.ads",
+      "line": 20,
+      "col": 35,
+      "rule": "DEPENDS_WRONG",
+      "severity": "medium",
+      "entity": {
+        "name": "SPU.Controller",
+        "sloc": [
+          {
+            "file": "spu.ads",
+            "line": 13
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "msg_id": 1,
+      "how_proved": "flow"
+    },
+    {
+      "file": "spu.ads",
+      "line": 19,
+      "col": 65,
+      "rule": "DEPENDS_WRONG",
+      "severity": "medium",
+      "entity": {
+        "name": "SPU.Controller",
+        "sloc": [
+          {
+            "file": "spu.ads",
+            "line": 13
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "msg_id": 2,
+      "how_proved": "flow"
+    },
+    {
+      "file": "spu.ads",
+      "line": 19,
+      "col": 36,
+      "rule": "DEPENDS_WRONG",
+      "severity": "medium",
+      "entity": {
+        "name": "SPU.Controller",
+        "sloc": [
+          {
+            "file": "spu.ads",
+            "line": 13
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "msg_id": 3,
+      "how_proved": "flow"
+    },
+    {
+      "file": "spu.ads",
+      "line": 20,
+      "col": 20,
+      "rule": "DEPENDS_MISSING",
+      "severity": "medium",
+      "entity": {
+        "name": "SPU.Controller",
+        "sloc": [
+          {
+            "file": "spu.ads",
+            "line": 13
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "tracefile": "spu__flow__0.trace",
+      "msg_id": 4,
+      "how_proved": "flow"
+    },
+    {
+      "file": "spu.ads",
+      "line": 21,
+      "col": 20,
+      "rule": "DEPENDS_MISSING",
+      "severity": "medium",
+      "entity": {
+        "name": "SPU.Controller",
+        "sloc": [
+          {
+            "file": "spu.ads",
+            "line": 13
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "tracefile": "spu__flow__1.trace",
+      "msg_id": 5,
+      "how_proved": "flow"
+    },
+    {
+      "file": "spu.ads",
+      "line": 21,
+      "col": 20,
+      "rule": "DEPENDS_MISSING",
+      "severity": "medium",
+      "entity": {
+        "name": "SPU.Controller",
+        "sloc": [
+          {
+            "file": "spu.ads",
+            "line": 13
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "tracefile": "spu__flow__2.trace",
+      "msg_id": 6,
+      "how_proved": "flow"
+    },
+    {
+      "file": "spu.ads",
+      "line": 22,
+      "col": 20,
+      "rule": "DEPENDS_MISSING",
+      "severity": "medium",
+      "entity": {
+        "name": "SPU.Controller",
+        "sloc": [
+          {
+            "file": "spu.ads",
+            "line": 13
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "tracefile": "spu__flow__3.trace",
+      "msg_id": 7,
+      "how_proved": "flow"
+    },
+    {
+      "file": "spu.ads",
+      "line": 22,
+      "col": 20,
+      "rule": "DEPENDS_MISSING",
+      "severity": "medium",
+      "entity": {
+        "name": "SPU.Controller",
+        "sloc": [
+          {
+            "file": "spu.ads",
+            "line": 13
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "tracefile": "spu__flow__4.trace",
+      "msg_id": 8,
+      "how_proved": "flow"
+    },
+    {
+      "file": "spu.ads",
+      "line": 22,
+      "col": 20,
+      "rule": "DEPENDS_MISSING",
+      "severity": "medium",
+      "entity": {
+        "name": "SPU.Controller",
+        "sloc": [
+          {
+            "file": "spu.ads",
+            "line": 13
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "tracefile": "spu__flow__5.trace",
+      "msg_id": 9,
+      "how_proved": "flow"
+    },
+    {
+      "file": "spu.ads",
+      "line": 23,
+      "col": 20,
+      "rule": "DEPENDS_MISSING",
+      "severity": "medium",
+      "entity": {
+        "name": "SPU.Controller",
+        "sloc": [
+          {
+            "file": "spu.ads",
+            "line": 13
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "tracefile": "spu__flow__6.trace",
+      "msg_id": 10,
+      "how_proved": "flow"
+    },
+    {
+      "file": "spu.ads",
+      "line": 23,
+      "col": 20,
+      "rule": "DEPENDS_MISSING",
+      "severity": "medium",
+      "entity": {
+        "name": "SPU.Controller",
+        "sloc": [
+          {
+            "file": "spu.ads",
+            "line": 13
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "tracefile": "spu__flow__7.trace",
+      "msg_id": 11,
+      "how_proved": "flow"
+    },
+    {
+      "file": "spu.ads",
+      "line": 18,
+      "col": 32,
+      "rule": "UNINITIALIZED",
+      "severity": "info",
+      "entity": {
+        "name": "SPU.Controller",
+        "sloc": [
+          {
+            "file": "spu.ads",
+            "line": 13
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "how_proved": "flow"
+    },
+    {
+      "file": "spu.adb",
+      "line": 5,
+      "col": 7,
+      "rule": "UNINITIALIZED",
+      "severity": "info",
+      "entity": {
+        "name": "SPU.Controller",
+        "sloc": [
+          {
+            "file": "spu.ads",
+            "line": 13
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "how_proved": "flow"
+    },
+    {
+      "file": "spu.adb",
+      "line": 6,
+      "col": 7,
+      "rule": "UNINITIALIZED",
+      "severity": "info",
+      "entity": {
+        "name": "SPU.Controller",
+        "sloc": [
+          {
+            "file": "spu.ads",
+            "line": 13
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "how_proved": "flow"
+    },
+    {
+      "file": "spu.ads",
+      "line": 16,
+      "col": 8,
+      "rule": "GLOBAL_WRONG",
+      "severity": "info",
+      "entity": {
+        "name": "SPU.Controller",
+        "sloc": [
+          {
+            "file": "spu.ads",
+            "line": 13
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "how_proved": "flow"
+    }
+  ],
+  "assumptions": [
+  ],
+  "timings": {
+    "globals (advanced)": 1.83409999590367E-03,
+    "flow analysis": 6.73570018261671E-03,
+    "marking": 1.53400003910065E-04,
+    "properties (advanced)": 4.21000004280359E-05,
+    "globals (basic)": 9.12500021513551E-04
+  }
+}

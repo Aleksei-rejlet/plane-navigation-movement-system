@@ -1,0 +1,5 @@
+spu.adb:8:27: error: invalid use of subtype mark in expression or call
+spu.ads:19:08: error: global "ModeIndicatorON" is missing from input dependence list
+spu.ads:19:08: error: add "null => ModeIndicatorON" dependency to ignore this input
+spu.ads:36:17: error: expected type "Standard.Boolean"
+spu.ads:36:17: error: found a composite type

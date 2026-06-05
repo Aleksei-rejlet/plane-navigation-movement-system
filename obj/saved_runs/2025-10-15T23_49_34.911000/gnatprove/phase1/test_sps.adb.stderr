@@ -1,0 +1,4 @@
+spu.ads:20:08: error: global "AlarmON" is missing from input dependence list
+spu.ads:20:08: error: add "null => AlarmON" dependency to ignore this input
+spu.ads:38:17: error: expected type "Standard.Boolean"
+spu.ads:38:17: error: found a composite type

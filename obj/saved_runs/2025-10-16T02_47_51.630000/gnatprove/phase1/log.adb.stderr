@@ -1,0 +1,6 @@
+spu.ads:20:52: error: attribute "OLD" can only appear in postcondition
+spu.ads:21:48: error: attribute "OLD" can only appear in postcondition
+spu.ads:22:23: error: global "AlarmON" cannot appear in dependence relation
+spu.ads:22:23: error: "AlarmON" is not part of the input or output set of subprogram "CONTROLLER"
+spu.ads:23:23: error: global "TailplaneState" cannot appear in dependence relation
+spu.ads:23:23: error: "TailplaneState" is not part of the input or output set of subprogram "CONTROLLER"

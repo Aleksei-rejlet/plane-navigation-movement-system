@@ -1,0 +1,6 @@
+spu.ads:27:51: error: binary operator expected
+spu.ads:30:50: error: binary operator expected
+spu.ads:33:58: error: binary operator expected
+spu.ads:37:57: error: binary operator expected
+spu.ads:41:47: error: binary operator expected
+spu.ads:42:52: error: missing ";"

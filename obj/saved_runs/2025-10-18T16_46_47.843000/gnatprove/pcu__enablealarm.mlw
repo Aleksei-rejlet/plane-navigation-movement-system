@@ -1,0 +1,157 @@
+module Standard__integer
+  use _gnatprove_standard.Main
+  use int.Int
+  use int.Int
+  
+  type integer = <range -2147483648 2147483647>
+  
+  val function first : int
+    ensures { result = ((- 2147483648) : int) }
+  
+  val function last : int
+    ensures { result = (2147483647 : int) }
+  
+  predicate in_range (x: int) = ((first <= x) /\ (x <= last))
+  
+  val in_range (x: int) : bool
+    ensures { result <-> (in_range (x : int)) }
+  
+  clone export ada__model.Static_Discrete with
+    axiom .,
+    type t = integer,
+    function first = first,
+    function last = last,
+    predicate in_range = in_range
+  
+  type integer__ref = { mutable integer__content : integer }
+  
+  function integer__ref_integer__content__projection (a: integer__ref) : integer =
+    a.integer__content
+  
+  meta "model_projection" function integer__ref_integer__content__projection
+  
+  meta "inline:no" function integer__ref_integer__content__projection
+  
+  val integer__havoc (x: integer__ref) : unit
+    writes { x }
+end
+
+module Standard__integer___axiom
+  use _gnatprove_standard.Main
+  use int.Int
+  use int.Int
+  use Standard__integer as Standard__integer
+  
+  predicate dynamic_invariant (temp___expr_18: int) (temp___is_init_14: bool) (temp___skip_constant_15: bool) (temp___do_toplevel_16: bool) (temp___do_typ_inv_17: bool) =
+    if ((temp___is_init_14 = True) \/
+          (Standard__integer.first <= Standard__integer.last)) then
+      (((Standard__integer.dynamic_property Standard__integer.first)
+          Standard__integer.last)
+         temp___expr_18)
+    else true
+  
+  val dynamic_invariant (temp___expr_18: int) (temp___is_init_14: bool) (temp___skip_constant_15: bool) (temp___do_toplevel_16: bool) (temp___do_typ_inv_17: bool) : 
+    bool
+    ensures { result
+                <->
+                (((((dynamic_invariant (temp___expr_18 : int))
+                      (temp___is_init_14 : bool))
+                     (temp___skip_constant_15 : bool))
+                    (temp___do_toplevel_16 : bool))
+                   (temp___do_typ_inv_17 : bool)) }
+  
+  predicate default_initial_assumption (temp___expr_19: int) (temp___skip_top_level_20: bool) =
+    true
+  
+  val default_initial_assumption (temp___expr_19: int) (temp___skip_top_level_20: bool) : 
+    bool
+    ensures { result
+                <->
+                ((default_initial_assumption (temp___expr_19 : int))
+                   (temp___skip_top_level_20 : bool)) }
+end
+
+module Pcu__alarmon
+  use _gnatprove_standard.Main
+  use int.Int
+  
+  val alarmon : bool__ref
+end
+
+module Pcu__alarmcnt
+  use _gnatprove_standard.Main
+  use int.Int
+  
+  val alarmcnt : int__ref
+end
+
+module Pcu__alarmon___axiom
+  use _gnatprove_standard.Main
+  use int.Int
+end
+
+module Pcu__alarmcnt___axiom
+  use _gnatprove_standard.Main
+  use int.Int
+end
+
+module Pcu__enablealarm__subprogram_def
+  use _gnatprove_standard.Main
+  use int.Int
+  use int.Int
+  use _gnatprove_standard.Boolean as Boolean
+  use Standard__integer as Standard__integer
+  use Standard__integer___axiom as Standard__integer___axiom
+  use Pcu__alarmon as Pcu__alarmon
+  use Pcu__alarmcnt as Pcu__alarmcnt
+  use Standard__integer___axiom as Standard__integer___axiom
+  use Standard__integer___axiom as Standard__integer___axiom
+  use Pcu__alarmon___axiom as Pcu__alarmon___axiom
+  use Pcu__alarmcnt___axiom as Pcu__alarmcnt___axiom
+  
+  let def (__void_param : unit)
+    requires { [#"pcu.ads" 19 0 0] true }
+  = [@vc:divergent]
+    (([@GNAT-comment:Assume dynamic invariants of inputs of the subprogram pcu.ads:19]
+      ());
+     ([#"pcu.ads" 19 0 0]
+      assume {
+        [#"pcu.ads" 19 0 0]
+        (((((Standard__integer___axiom.dynamic_invariant
+               (Pcu__alarmcnt.alarmcnt.int__content))
+              True)
+             False)
+            True)
+           True) });
+     ([@GNAT-comment:Assume moved pointers in outputs of the subprogram pcu.ads:19]
+      ());
+     ([@GNAT-comment:Check for RTE in the Pre of the subprogram pcu.ads:19]
+      ());
+     ([#"pcu.ads" 19 0 0] ());
+     ([@GNAT-comment:Assume Pre of the subprogram pcu.ads:19] ());
+     ([#"pcu.ads" 19 0 0]
+      (try
+         ([@GP_Sloc:pcu.adb:7:7] [#"pcu.adb" 7 0 0] ());
+         ([@GP_Sloc:pcu.adb:7:15]
+          [#"pcu.adb" 7 0 0]
+          [#"pcu.adb" 7 0 0]
+          (Pcu__alarmon.alarmon.bool__content <- (Boolean.of_int (1 : int))));
+         ([@GP_Sloc:pcu.adb:10:10] [#"pcu.adb" 10 0 0] ());
+         ([@GP_Sloc:pcu.adb:10:22] [#"pcu.adb" 10 0 0] ());
+         ([@GP_Sloc:pcu.adb:10:19]
+          [#"pcu.adb" 10 0 0]
+          [#"pcu.adb" 10 0 0]
+          (Pcu__alarmcnt.alarmcnt.int__content <-
+             ([#"pcu.adb" 10 0 0]
+              [@vc:annotation]
+              [@GP_Reason:VC_OVERFLOW_CHECK]
+              [@GP_Sloc:pcu.adb:10:31]
+              [@GP_Id:0]
+              [@GP_Shape:alarmcnt_assign__add]
+              [@comment:         AlarmCnt := AlarmCnt + 1;                               ^ pcu.adb:10:31:VC_OVERFLOW_CHECK]
+              (Standard__integer.range_check_
+                 ((Pcu__alarmcnt.alarmcnt.int__content) + (1 : int))))));
+         (raise Return__exc)
+       with Return__exc -> ()
+       end)))
+end

@@ -1,0 +1,6 @@
+spu.ads:19:33: medium: "AlarmON" might not be initialized[#4]
+spu.ads:19:46: medium: "TailplaneState" might not be initialized[#5]
+spu.ads:21:52: medium: incorrect dependency "Prev_Major => Prev_Major"[#0]
+spu.ads:22:48: medium: incorrect dependency "Prev_ModeOn => Prev_ModeOn"[#1]
+spu.ads:25:20: medium: missing dependency "AlarmCnt => SensorState"[#2]
+spu.ads:25:20: medium: missing dependency "AlarmCnt => Prev_Major"[#3]

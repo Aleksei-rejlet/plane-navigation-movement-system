@@ -1,0 +1,134 @@
+'2025-10-18T16:39:50.363000':
+  category: GNATprove
+  files:
+  - C:\GNAT\2021\bin\Mycw1\obj\gnatprove
+  label: Examine All Sources
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: analysis of data and information flow ...
+
+    spu.ads:18:32: medium: "TailplaneState" might not be initialized[#0]
+
+    Summary logged in C:\GNAT\2021\bin\Mycw1\obj\gnatprove\gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2025-10-18T16:39:50.363000'
+'2025-10-18T16:41:33.218000':
+  category: GNATprove
+  files:
+  - C:\GNAT\2021\bin\Mycw1\obj\gnatprove
+  label: Examine All Sources
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    spu.adb:8:10: error: procedure or entry name expected
+
+    gnatprove: error during generation of Global contracts
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2025-10-18T16:41:33.218000'
+'2025-10-18T16:42:03.949000':
+  category: GNATprove
+  files:
+  - C:\GNAT\2021\bin\Mycw1\obj\gnatprove
+  label: Examine All Sources
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: analysis of data and information flow ...
+
+    Summary logged in C:\GNAT\2021\bin\Mycw1\obj\gnatprove\gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2025-10-18T16:42:03.949000'
+'2025-10-18T16:42:18.150000':
+  category: GNATprove
+  files:
+  - C:\GNAT\2021\bin\Mycw1\obj\gnatprove
+  label: Examine All Sources
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: analysis of data and information flow ...
+
+    spu.ads:18:32: medium: "TailplaneState" might not be initialized[#0]
+
+    Summary logged in C:\GNAT\2021\bin\Mycw1\obj\gnatprove\gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2025-10-18T16:42:18.150000'
+'2025-10-18T16:43:05.783000':
+  category: GNATprove
+  files:
+  - C:\GNAT\2021\bin\Mycw1\obj\gnatprove
+  label: Examine All Sources
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: analysis of data and information flow ...
+
+    Summary logged in C:\GNAT\2021\bin\Mycw1\obj\gnatprove\gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2025-10-18T16:43:05.783000'
+'2025-10-18T16:44:45.412000':
+  category: GNATprove
+  files:
+  - C:\GNAT\2021\bin\Mycw1\obj\gnatprove
+  label: Examine All Sources
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: analysis of data and information flow ...
+
+    Summary logged in C:\GNAT\2021\bin\Mycw1\obj\gnatprove\gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2025-10-18T16:44:45.412000'
+'2025-10-18T16:45:59.515000':
+  category: GNATprove
+  files:
+  - C:\GNAT\2021\bin\Mycw1\obj\gnatprove
+  label: Basic Prove All Sources
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    Summary logged in C:\GNAT\2021\bin\Mycw1\obj\gnatprove\gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2025-10-18T16:45:59.515000'
+'2025-10-18T16:46:47.843000':
+  category: GNATprove
+  files:
+  - C:\GNAT\2021\bin\Mycw1\obj\gnatprove
+  label: Basic Prove All Sources
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    pcu.adb:10:31: medium: overflow check might fail [reason for check: result of
+    addition must fit in a 32-bits machine integer] [possible fix: subprogram at pcu.ads:19
+    should mention AlarmCnt in a precondition][#0]
+
+    Summary logged in C:\GNAT\2021\bin\Mycw1\obj\gnatprove\gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2025-10-18T16:46:47.843000'
+'2025-10-18T16:48:55.340000':
+  category: GNATprove
+  files:
+  - C:\GNAT\2021\bin\Mycw1\obj\gnatprove
+  label: Basic Prove All Sources
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    Summary logged in C:\GNAT\2021\bin\Mycw1\obj\gnatprove\gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2025-10-18T16:48:55.340000'

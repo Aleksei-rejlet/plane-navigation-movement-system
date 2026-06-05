@@ -1,0 +1,2 @@
+spu.adb:11:15: high: "AlarmON" must be a global output of "Controller" (SPARK RM 6.1.4(17))[#0]
+spu.adb:13:15: high: "AlarmON" must be a global output of "Controller" (SPARK RM 6.1.4(17))[#1]

@@ -1,0 +1,6 @@
+hsu.adb:1:14: error: missing body for "TailplaneUP" declared at hsu.ads:17
+hsu.adb:1:14: error: missing body for "TailplaneDOWN" declared at hsu.ads:23
+hsu.adb:1:14: error: missing body for "TailplaneNORMAL" declared at hsu.ads:29
+hsu.adb:1:14: error: missing body for "isTailplaneUP" declared at hsu.ads:35
+hsu.adb:1:14: error: missing body for "isTailplaneDOWN" declared at hsu.ads:41
+hsu.adb:1:14: error: missing body for "isTailplaneNORMAL" declared at hsu.ads:47

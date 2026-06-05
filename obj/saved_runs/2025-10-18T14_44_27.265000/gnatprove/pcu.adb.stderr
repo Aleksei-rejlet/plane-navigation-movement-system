@@ -1,0 +1,2 @@
+pcu.ads:22:30: warning: "AlarmCnt" is not modified, could be INPUT[#0]
+pcu.ads:22:30: low: unused global "AlarmCnt"[#1]

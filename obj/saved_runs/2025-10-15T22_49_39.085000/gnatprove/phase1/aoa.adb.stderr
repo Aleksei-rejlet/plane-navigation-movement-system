@@ -1,0 +1,12 @@
+aoa.adb:10:13: error: not fully conformant with declaration at aoa.ads:30
+aoa.adb:10:13: error: type of "Sensor_Index" does not match
+aoa.adb:17:35: error: expected type "Standard.Integer"
+aoa.adb:17:35: error: found a composite type
+aoa.adb:37:19: error: expected type "Sensors_Type" defined at aoa.ads:19
+aoa.adb:37:19: error: found type "Standard.Integer"
+aoa.adb:39:19: error: expected type "Sensors_Type" defined at aoa.ads:19
+aoa.adb:39:19: error: found type "Standard.Integer"
+aoa.adb:60:59: error: expected type "Sensors_Type" defined at aoa.ads:19
+aoa.adb:60:59: error: found type "Standard.Integer"
+aoa.adb:63:14: error: expected type "Standard.Integer"
+aoa.adb:63:14: error: found type "Sensors_Type" defined at aoa.ads:19

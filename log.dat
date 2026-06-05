@@ -1,0 +1,82 @@
+ 
+|-------------------------------------------------------------------------------------|
+|                                       SPS LOG                                       |
+|-------------------------------------------------------------------------------------|
+|            AoA             |                   PCU                     |    HSU     |
+|----------------------------|-------------------------------------------|------------|
+|                            | STALL PREVENT MODE  |         ALARM       |            |
+|                            |---------------------|---------------------|  TAILPLANE |
+| SEN-1  SEN-2  SEN-3  MAJOR | BUTTON  | INDICATOR |   STATE   |  COUNT  |  POSITION  |
+|-------------------------------------------------------------------------------------|
+|    0      0      0      0  |         |     OFF   |     OFF   |     0   |   NORMAL   | 
+|    0      0      0      0  |         |     OFF   |     OFF   |     0   |   NORMAL   | 
+|   10     10     10     10  |         |     OFF   |     OFF   |     0   |   NORMAL   | 
+|   10     10     10     10  |         |     OFF   |     OFF   |     0   |   NORMAL   | 
+|   10     10     10     10  | PRESSED |   ON      |     OFF   |     0   |   NORMAL   | 
+|   10     10     10     10  | PRESSED |   ON      |     OFF   |     0   |   NORMAL   | 
+|   15     15     15     15  |         |   ON      |     OFF   |     0   |   NORMAL   | 
+|   15     15     15     15  |         |   ON      |     OFF   |     0   |   NORMAL   | 
+|   25     25     25     25  |         |   ON      |     OFF   |     0   |   NORMAL   | 
+|   25     25     25     25  |         |   ON      |     OFF   |     0   |   NORMAL   | 
+|   26     26     26     26  |         |   ON      |     OFF   |     0   |   NORMAL   | 
+|   26     26     26     26  |         |   ON      |   ON      |     1   |   NORMAL   | 
+|   27     27     27     27  |         |   ON      |   ON      |     1   |   NORMAL   | 
+|   27     27     27     27  |         |   ON      |   ON      |     1   |   NORMAL   | 
+|   28     28     20     28  |         |   ON      |   ON      |     1   |   NORMAL   | 
+|   28     28     20     28  |         |   ON      |   ON      |     1   |   NORMAL   | 
+|   30     30     30     30  |         |   ON      |   ON      |     1   |   NORMAL   | 
+|   30     30     30     30  |         |   ON      |   ON      |     1   |   UP       | 
+|   30     30     30     30  |         |   ON      |   ON      |     1   |   UP       | 
+|   30     30     30     30  |         |   ON      |   ON      |     1   |   UP       | 
+|   25     25     25     25  |         |   ON      |   ON      |     1   |   UP       | 
+|   25     25     25     25  |         |   ON      |     OFF   |     1   |   NORMAL   | 
+|   24     24     24     24  |         |   ON      |     OFF   |     1   |   NORMAL   | 
+|   24     24     24     24  |         |   ON      |     OFF   |     1   |   NORMAL   | 
+|   10     10     10     10  | PRESSED |     OFF   |     OFF   |     1   |   NORMAL   | 
+|   10     10     10     10  | PRESSED |     OFF   |     OFF   |     1   |   NORMAL   | 
+|   10     10     10     10  |         |     OFF   |     OFF   |     1   |   NORMAL   | 
+|   10     10     10     10  |         |     OFF   |     OFF   |     1   |   NORMAL   | 
+|   10     15     20     15  |         |     OFF   |     OFF   |     1   |   NORMAL   | 
+|   10     15     20     15  |         |     OFF   |     OFF   |     1   |   NORMAL   | 
+|   20     20     20     20  | PRESSED |   ON      |     OFF   |     1   |   NORMAL   | 
+|   20     20     20     20  | PRESSED |   ON      |     OFF   |     1   |   NORMAL   | 
+|   30     30     30     30  |         |   ON      |     OFF   |     1   |   NORMAL   | 
+|   30     30     30     30  |         |   ON      |     OFF   |     1   |   UP       | 
+|   35     35     35     35  |         |   ON      |     OFF   |     1   |   UP       | 
+|   35     35     35     35  |         |   ON      |   ON      |     2   |   UP       | 
+|   35     35     35     35  | PRESSED |     OFF   |   ON      |     2   |   UP       | 
+|   35     35     35     35  | PRESSED |     OFF   |   ON      |     2   |   NORMAL   | 
+|   35     35     35     35  |         |     OFF   |   ON      |     2   |   NORMAL   | 
+|   35     35     35     35  |         |     OFF   |   ON      |     2   |   NORMAL   | 
+|   24     24     24     24  |         |     OFF   |   ON      |     2   |   NORMAL   | 
+|   24     24     24     24  |         |     OFF   |     OFF   |     2   |   NORMAL   | 
+|   30     30     30     30  |         |     OFF   |     OFF   |     2   |   NORMAL   | 
+|   30     30     30     30  |         |     OFF   |     OFF   |     2   |   NORMAL   | 
+|   30     30     30     30  |         |     OFF   |     OFF   |     2   |   NORMAL   | 
+|   30     30     30     30  |         |     OFF   |   ON      |     3   |   NORMAL   | 
+|   24     24     24     24  | PRESSED |   ON      |   ON      |     3   |   NORMAL   | 
+|   24     24     24     24  | PRESSED |   ON      |     OFF   |     3   |   NORMAL   | 
+|   24     23     24     24  |         |   ON      |     OFF   |     3   |   NORMAL   | 
+|   24     23     24     24  |         |   ON      |     OFF   |     3   |   NORMAL   | 
+|   24     24     24     24  |         |   ON      |     OFF   |     3   |   NORMAL   | 
+|   24     24     24     24  |         |   ON      |     OFF   |     3   |   NORMAL   | 
+|   24     24     24     24  | PRESSED |     OFF   |     OFF   |     3   |   NORMAL   | 
+|   24     24     24     24  | PRESSED |     OFF   |     OFF   |     3   |   NORMAL   | 
+|   24     24     24     24  |         |     OFF   |     OFF   |     3   |   NORMAL   | 
+|   24     24     24     24  |         |     OFF   |     OFF   |     3   |   NORMAL   | 
+|   24     24     24     24  | PRESSED |   ON      |     OFF   |     3   |   NORMAL   | 
+|   24     24     24     24  | PRESSED |   ON      |     OFF   |     3   |   NORMAL   | 
+|   24     24     24     24  |         |   ON      |     OFF   |     3   |   NORMAL   | 
+|   24     24     24     24  |         |   ON      |     OFF   |     3   |   NORMAL   | 
+|   31     31     31     31  |         |   ON      |     OFF   |     3   |   NORMAL   | 
+|   31     31     31     31  |         |   ON      |     OFF   |     3   |   UP       | 
+|   30     30     30     30  |         |   ON      |     OFF   |     3   |   UP       | 
+|   30     30     30     30  |         |   ON      |     OFF   |     3   |   UP       | 
+|   30     30     30     30  | PRESSED |     OFF   |     OFF   |     3   |   UP       | 
+|   30     30     30     30  | PRESSED |     OFF   |   ON      |     4   |   NORMAL   | 
+|   30     30     30     30  |         |     OFF   |   ON      |     4   |   NORMAL   | 
+|   30     30     30     30  |         |     OFF   |   ON      |     4   |   NORMAL   | 
+|-------------------------------------------------------------------------------------|
+   Note: SPS = Stall Prevention System; AoA = Angle of Attack (sensor unit); 
+         PCU = Pilot's Console Unit; HSU = Horizontal Stabilizer Unit. 
+ 

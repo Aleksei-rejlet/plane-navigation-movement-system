@@ -1,0 +1,6 @@
+spu.ads:19:08: error: global "ModeIndicatorON" is missing from input dependence list
+spu.ads:19:08: error: add "null => ModeIndicatorON" dependency to ignore this input
+spu.ads:23:28: error: "ModeIndicatorON" is not visible
+spu.ads:23:28: error: non-visible declaration at pcu.ads:16
+spu.ads:37:17: error: expected type "Standard.Boolean"
+spu.ads:37:17: error: found a composite type

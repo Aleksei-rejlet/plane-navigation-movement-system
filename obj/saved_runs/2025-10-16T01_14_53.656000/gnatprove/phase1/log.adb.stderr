@@ -1,0 +1,2 @@
+spu.ads:38:17: error: expected type "Standard.Boolean"
+spu.ads:38:17: error: found a composite type

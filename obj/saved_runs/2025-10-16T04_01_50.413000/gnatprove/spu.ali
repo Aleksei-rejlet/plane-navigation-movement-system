@@ -1,0 +1,87 @@
+V "GNAT Lib v2021"
+A -x
+A ada
+A -gnatA
+A -gnat2020
+A -gnatc
+P GP FX
+
+RN
+RV NO_IMPLEMENTATION_ASPECT_SPECIFICATIONS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_ELABORATION_CODE
+
+U spu%b			spu.adb			91e39aa9 OO PK IU
+
+U spu%s			spu.ads			4b5fdd03 EB OO PK IU
+W aoa%s			aoa.adb			aoa.ali
+W hsu%s			hsu.adb			hsu.ali
+W pcu%s			pcu.adb			pcu.ali
+
+D aoa.ads		20251014152530 ebe39c00 aoa%s
+D hsu.ads		20251014152326 8e29cae1 hsu%s
+D pcu.ads		20251014152350 52f7b4a6 pcu%s
+D spu.ads		20251015235902 7c623f44 spu%s
+D spu.adb		20251015230418 ed81a5ed spu%b
+D system.ads		20210520051134 2ffa5114 system%s
+G a Z
+X 1 aoa.ads
+9K9*AoA 41e8 4|2w6 10r17 10r36 16r29 19r36 22r42 5|5r23 8r24
+15i4*Undef_Value{integer} 4|10r40
+17I12*Sensor_Type{integer} 4|10r21 5|5r27
+19A9*Sensors_Type(17I12)<integer>
+21a4*SensorState{19A9} 4|16r33 19r40 22r46
+36V13*Read_Sensor_Majority{17I12} 5|8s28
+X 2 hsu.ads
+7K9*HSU 52e8 4|4w6 18r29 22r20 5|18r10 20r38 21r15
+14e4*TailplaneState{12E9} 4|18r33 22r24
+17U14*TailplaneUP 5|20s42
+29U14*TailplaneNORMAL 5|18s14 21s19
+X 3 pcu.ads
+7K10*PCU 79e8 4|3w6 16r46 16r58 17r55 19r53 19r65 20r35 21r20 5|9r23 11r12
+. 13r12
+12b4*AlarmON{boolean} 4|17r59 20r39 21r24
+13i4*AlarmCnt{integer} 4|16r62 19r69
+15b4*ModeON{boolean} 4|16r50 19r57
+19U14*EnableAlarm 5|11s16
+27U14*DisableAlarm 5|13s16
+68V13*isEnabledMode{boolean} 5|9s27
+X 4 spu.ads
+6K9*SPU 30l5 30e8 5|2b14 32l5 32t8
+10i4*Prev_Major{1|17I12} 17r30 20r20 20r48 21r35 5|10r42 10r87 12r43 12r85
+. 24m7
+11b4*Prev_ModeOn{boolean} 17r42 19r20 19r79 5|16r38 25m7
+13U14*Controller 5|4b14 28l8 28t18
+X 5 spu.adb
+5i7 Current_Major{1|17I12} 8m7 10r11 10r70 12r14 12r69 20r13 24r21
+6b7 Mode_Enabled{boolean} 9m7 16r15 19r13 25r22
+
+QQ SPARKVERSION SPARK Community 2021 (20210519)
+GG EK_DIRECT_CALLS spu__controller 6 aoa__read_sensor_majority pcu__enablealarm pcu__disablealarm pcu__isenabledmode hsu__tailplaneup hsu__tailplanenormal
+GG EK_GLOBALS spu__controller local FALSE E_PROCEDURE FALSE ORIGIN_FLOW 1 spu proper_proof_in 0 proper_input 6 spu__prev_major spu__prev_modeon aoa__sensorstate pcu__alarmon pcu__alarmcnt pcu__modeon proper_output 4 spu__prev_major spu__prev_modeon pcu__alarmon hsu__tailplanestate refined_proof_in 0 refined_input 6 spu__prev_major spu__prev_modeon aoa__sensorstate pcu__alarmon pcu__alarmcnt pcu__modeon refined_output 4 spu__prev_major spu__prev_modeon pcu__alarmon hsu__tailplanestate calls_proof 0 calls 0 calls_conditional 0 FALSE FALSE FALSE TRUE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 7 spu__prev_major spu__prev_modeon aoa__sensorstate pcu__alarmon pcu__alarmcnt pcu__modeon hsu__tailplanestate LOCKS 0
+GG EK_DIRECT_CALLS spu 0
+GG EK_GLOBALS spu local FALSE E_PACKAGE TRUE ORIGIN_FLOW 0 proper_proof_in 0 proper_input 0 proper_output 0 refined_proof_in 0 refined_input 0 refined_output 0 initializes 2 spu__prev_major spu__prev_modeon refined_initializes 2 spu__prev_major spu__prev_modeon calls_proof 0 calls 0 calls_conditional 0 local_var 2 spu__prev_major spu__prev_modeon FALSE FALSE FALSE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
+GG EK_FLOW_SCOPE pcu TRUE FALSE FALSE FALSE FALSE __standard
+GG EK_FLOW_SCOPE pcu__isenabledmode FALSE FALSE FALSE FALSE TRUE pcu VISIBLE_PART
+GG EK_FLOW_SCOPE hsu__tailplanenormal FALSE FALSE FALSE FALSE TRUE hsu VISIBLE_PART
+GG EK_FLOW_SCOPE pcu__isenabledalarm FALSE FALSE FALSE FALSE TRUE pcu VISIBLE_PART
+GG EK_FLOW_SCOPE hsu TRUE FALSE FALSE FALSE FALSE __standard
+GG EK_FLOW_SCOPE pcu__ismodebuttonpressed FALSE FALSE FALSE FALSE TRUE pcu VISIBLE_PART
+GG EK_FLOW_SCOPE hsu__istailplanenormal FALSE FALSE FALSE FALSE TRUE hsu VISIBLE_PART
+GG EK_FLOW_SCOPE aoa__write_sensors FALSE FALSE FALSE FALSE TRUE aoa VISIBLE_PART
+GG EK_FLOW_SCOPE aoa__read_sensor_majority FALSE FALSE FALSE FALSE TRUE aoa VISIBLE_PART
+GG EK_FLOW_SCOPE hsu__istailplaneup FALSE FALSE FALSE FALSE TRUE hsu VISIBLE_PART
+GG EK_FLOW_SCOPE pcu__enablealarm FALSE FALSE FALSE FALSE TRUE pcu VISIBLE_PART
+GG EK_FLOW_SCOPE hsu__tailplaneup FALSE FALSE FALSE FALSE TRUE hsu VISIBLE_PART
+GG EK_FLOW_SCOPE pcu__isenabledmodeindicator FALSE FALSE FALSE FALSE TRUE pcu VISIBLE_PART
+GG EK_FLOW_SCOPE pcu__recordmodebuttonpressed FALSE FALSE FALSE FALSE TRUE pcu VISIBLE_PART
+GG EK_FLOW_SCOPE pcu__togglemode FALSE FALSE FALSE FALSE TRUE pcu VISIBLE_PART
+GG EK_FLOW_SCOPE aoa TRUE FALSE FALSE FALSE FALSE __standard
+GG EK_FLOW_SCOPE spu TRUE FALSE FALSE FALSE FALSE __standard
+GG EK_FLOW_SCOPE hsu__tailplanedown FALSE FALSE FALSE FALSE TRUE hsu VISIBLE_PART
+GG EK_FLOW_SCOPE hsu__istailplanedown FALSE FALSE FALSE FALSE TRUE hsu VISIBLE_PART
+GG EK_FLOW_SCOPE pcu__disablealarm FALSE FALSE FALSE FALSE TRUE pcu VISIBLE_PART
+GG EK_FLOW_SCOPE aoa__read_sensor FALSE FALSE FALSE FALSE TRUE aoa VISIBLE_PART
+GG EK_FLOW_SCOPE pcu__recordmodebuttonnotpressed FALSE FALSE FALSE FALSE TRUE pcu VISIBLE_PART
+GG EK_FLOW_SCOPE spu__controller FALSE FALSE FALSE FALSE TRUE spu VISIBLE_PART
+GG EK_END_MARKER

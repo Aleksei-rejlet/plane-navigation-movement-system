@@ -1,0 +1,230 @@
+{
+  "spark": [
+    {
+      "name": "SPU",
+      "sloc": [
+        {
+          "file": "spu.ads",
+          "line": 6
+        }
+      ],
+      "spark": "all"
+    },
+    {
+      "name": "SPU.Controller",
+      "sloc": [
+        {
+          "file": "spu.ads",
+          "line": 13
+        }
+      ],
+      "spark": "all"
+    }
+  ],
+  "flow": [
+    {
+      "file": "spu.ads",
+      "line": 18,
+      "col": 32,
+      "rule": "UNINITIALIZED",
+      "severity": "info",
+      "entity": {
+        "name": "SPU.Controller",
+        "sloc": [
+          {
+            "file": "spu.ads",
+            "line": 13
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "how_proved": "flow"
+    },
+    {
+      "file": "spu.adb",
+      "line": 5,
+      "col": 7,
+      "rule": "UNINITIALIZED",
+      "severity": "info",
+      "entity": {
+        "name": "SPU.Controller",
+        "sloc": [
+          {
+            "file": "spu.ads",
+            "line": 13
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "how_proved": "flow"
+    },
+    {
+      "file": "spu.adb",
+      "line": 6,
+      "col": 7,
+      "rule": "UNINITIALIZED",
+      "severity": "info",
+      "entity": {
+        "name": "SPU.Controller",
+        "sloc": [
+          {
+            "file": "spu.ads",
+            "line": 13
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "how_proved": "flow"
+    },
+    {
+      "file": "spu.ads",
+      "line": 16,
+      "col": 8,
+      "rule": "GLOBAL_WRONG",
+      "severity": "info",
+      "entity": {
+        "name": "SPU.Controller",
+        "sloc": [
+          {
+            "file": "spu.ads",
+            "line": 13
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "how_proved": "flow"
+    },
+    {
+      "file": "spu.ads",
+      "line": 19,
+      "col": 8,
+      "rule": "DEPENDS_WRONG",
+      "severity": "info",
+      "entity": {
+        "name": "SPU.Controller",
+        "sloc": [
+          {
+            "file": "spu.ads",
+            "line": 13
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "how_proved": "flow"
+    }
+  ],
+  "assumptions": [
+    {
+      "assumptions": [
+        {
+          "predicate": "CLAIM_EFFECTS",
+          "arg": {
+            "name": "AoA.Read_Sensor_Majority",
+            "sloc": [
+              {
+                "file": "aoa.ads",
+                "line": 36
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_EFFECTS",
+          "arg": {
+            "name": "HSU.TailplaneNORMAL",
+            "sloc": [
+              {
+                "file": "hsu.ads",
+                "line": 29
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_EFFECTS",
+          "arg": {
+            "name": "HSU.TailplaneUP",
+            "sloc": [
+              {
+                "file": "hsu.ads",
+                "line": 17
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_EFFECTS",
+          "arg": {
+            "name": "PCU.DisableAlarm",
+            "sloc": [
+              {
+                "file": "pcu.ads",
+                "line": 27
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_EFFECTS",
+          "arg": {
+            "name": "PCU.EnableAlarm",
+            "sloc": [
+              {
+                "file": "pcu.ads",
+                "line": 19
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_EFFECTS",
+          "arg": {
+            "name": "PCU.isEnabledAlarm",
+            "sloc": [
+              {
+                "file": "pcu.ads",
+                "line": 33
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_EFFECTS",
+          "arg": {
+            "name": "PCU.isEnabledMode",
+            "sloc": [
+              {
+                "file": "pcu.ads",
+                "line": 68
+              }
+            ]
+          }
+        }
+      ],
+      "claim": {
+        "predicate": "CLAIM_EFFECTS",
+        "arg": {
+          "name": "SPU.Controller",
+          "sloc": [
+            {
+              "file": "spu.ads",
+              "line": 13
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "timings": {
+    "globals (advanced)": 1.87909998930991E-03,
+    "flow analysis": 3.96199990063906E-03,
+    "marking": 1.20600001537241E-04,
+    "properties (advanced)": 3.70000016118865E-05,
+    "globals (basic)": 9.16799996048212E-04
+  }
+}

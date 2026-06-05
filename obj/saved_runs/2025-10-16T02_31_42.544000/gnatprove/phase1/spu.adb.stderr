@@ -1,0 +1,2 @@
+spu.adb:12:11: error: statement expected
+spu.adb:19:07: error: "else" should be "elsif"

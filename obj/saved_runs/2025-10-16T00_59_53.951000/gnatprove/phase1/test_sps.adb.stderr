@@ -1,0 +1,3 @@
+spu.ads:31:19: error: expected type "Standard.Boolean"
+spu.ads:31:19: error: found a composite type
+spu.ads:40:17: error: missing ")"

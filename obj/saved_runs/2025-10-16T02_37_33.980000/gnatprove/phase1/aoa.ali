@@ -1,0 +1,64 @@
+V "GNAT Lib v2021"
+A -x
+A ada
+A -gnatA
+A -gnat2020
+A -gnatc
+P GP FX
+
+RN
+RV NO_IMPLEMENTATION_ASPECT_SPECIFICATIONS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_ELABORATION_CODE
+
+U aoa%b			aoa.adb			d61264f4 OO PK
+
+U aoa%s			aoa.ads			ebe39c00 EB OO PK
+
+D aoa.ads		20251014152530 ebe39c00 aoa%s
+D aoa.adb		20251015223728 3df1f8f4 aoa%b
+D system.ads		20210520051134 2ffa5114 system%s
+G a Z
+X 1 aoa.ads
+9K9*AoA 41l5 41e8 2|2b14 71l5 71t8
+15i4*Undef_Value{integer} 2|23r26 33r17
+17I12*Sensor_Type{integer} 19r54 24r58 30r68 36r41 2|3r60 10r69 15r41 17r20
+. 20r15 43r28
+18I12*Sensor_Index_Type{integer} 19r32 30r42 2|10r43 22r16
+19A9*Sensors_Type(17I12)<integer> 21r17 2|18r16 42r20
+21a4*SensorState{19A9} 26r27 27r18 27r34 32r27 33r41 38r27 39r49 2|5m7 6m7
+. 7m7 12r14 18r32
+24U14*Write_Sensors 24>28 24>37 24>46 2|3b14 8l8 8t21
+24i28 Value_1{17I12} 27r47 2|3b29 5r25
+24i37 Value_2{17I12} 27r56 2|3b38 6r25
+24i46 Value_3{17I12} 27r65 2|3b47 7r25
+30V13*Read_Sensor{17I12} 30>25 33r18 2|10b13 13l8 13t19
+30i25 Sensor_Index{18I12} 33r54 2|10b26 12r27
+36V13*Read_Sensor_Majority{17I12} 39r18 2|15b13 64l8 64t28
+X 2 aoa.adb
+17i7 V1{1|17I12} 28m7 36r10 36r26 37r19 42r42
+17i11 V2{1|17I12} 29m7 36r15 38r13 39r19 42r51
+17i15 V3{1|17I12} 30m7 36r31 38r18 42r60
+18a7 Values{1|19A9} 23r13 28r13 29r13 30r13
+19i7 Defined_Count{natural} 24m13 24r30 32r10
+20i7 Maj_V{1|17I12} 37m10 39m10 60m13 63r14
+22i11 I{1|18I12} 23r20
+42a13 Temp{1|19A9} 45r22 46r16 47r25 49r16 50r25 53r22 54r16 55r25 57r16
+. 58r25 60r22 60r32 60r43
+43i13 Minim{1|17I12} 45m13 46r26 47m16 49r26 50m16 60r53
+43i20 Maxim{1|17I12} 53m13 54r26 55m16 57r26 58m16 60r61
+
+QQ SPARKVERSION SPARK Community 2021 (20210519)
+GG EK_DIRECT_CALLS aoa__write_sensors 0
+GG EK_GLOBALS aoa__write_sensors local FALSE E_PROCEDURE FALSE ORIGIN_FLOW 1 aoa proper_proof_in 0 proper_input 1 aoa__sensorstate proper_output 1 aoa__sensorstate refined_proof_in 0 refined_input 1 aoa__sensorstate refined_output 1 aoa__sensorstate calls_proof 0 calls 0 calls_conditional 0 FALSE FALSE FALSE TRUE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 1 aoa__sensorstate LOCKS 0
+GG EK_DIRECT_CALLS aoa__read_sensor 0
+GG EK_GLOBALS aoa__read_sensor local FALSE E_FUNCTION FALSE ORIGIN_FLOW 1 aoa proper_proof_in 0 proper_input 1 aoa__sensorstate proper_output 0 refined_proof_in 0 refined_input 1 aoa__sensorstate refined_output 0 calls_proof 0 calls 0 calls_conditional 0 FALSE FALSE FALSE TRUE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 1 aoa__sensorstate LOCKS 0
+GG EK_DIRECT_CALLS aoa__read_sensor_majority 0
+GG EK_GLOBALS aoa__read_sensor_majority local FALSE E_FUNCTION FALSE ORIGIN_FLOW 1 aoa proper_proof_in 0 proper_input 1 aoa__sensorstate proper_output 0 refined_proof_in 0 refined_input 1 aoa__sensorstate refined_output 0 calls_proof 0 calls 0 calls_conditional 0 FALSE FALSE FALSE TRUE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 1 aoa__sensorstate LOCKS 0
+GG EK_DIRECT_CALLS aoa 0
+GG EK_GLOBALS aoa local FALSE E_PACKAGE TRUE ORIGIN_FLOW 0 proper_proof_in 0 proper_input 0 proper_output 0 refined_proof_in 0 refined_input 0 refined_output 0 initializes 0 refined_initializes 0 calls_proof 0 calls 0 calls_conditional 0 local_var 1 aoa__sensorstate FALSE FALSE FALSE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
+GG EK_FLOW_SCOPE aoa__read_sensor_majority FALSE FALSE FALSE FALSE TRUE aoa VISIBLE_PART
+GG EK_FLOW_SCOPE aoa TRUE FALSE FALSE FALSE FALSE __standard
+GG EK_FLOW_SCOPE aoa__read_sensor FALSE FALSE FALSE FALSE TRUE aoa VISIBLE_PART
+GG EK_FLOW_SCOPE aoa__write_sensors FALSE FALSE FALSE FALSE TRUE aoa VISIBLE_PART
+GG EK_END_MARKER

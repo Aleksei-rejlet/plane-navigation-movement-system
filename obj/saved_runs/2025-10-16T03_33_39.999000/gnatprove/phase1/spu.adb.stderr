@@ -1,0 +1,10 @@
+spu.ads:17:30: error: "AlarmON" is not visible (more references follow)
+spu.ads:17:30: error: non-visible declaration at pcu.ads:12
+spu.ads:17:39: error: "AlarmCnt" is not visible (more references follow)
+spu.ads:17:39: error: non-visible declaration at pcu.ads:13
+spu.ads:17:49: error: "TailplaneState" is not visible (more references follow)
+spu.ads:17:49: error: non-visible declaration at hsu.ads:14
+spu.ads:18:08: error: global "AlarmCnt" is missing from input dependence list
+spu.ads:18:08: error: add "null => AlarmCnt" dependency to ignore this input
+spu.ads:19:35: error: constant "Undef_Value" cannot appear in dependence relation
+spu.ads:19:35: error: "Undef_Value" is not part of the input or output set of subprogram "CONTROLLER"

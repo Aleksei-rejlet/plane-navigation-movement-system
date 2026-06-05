@@ -1,0 +1,6 @@
+spu.ads:39:42: error: operator for type "Position" defined at hsu.ads:12 is not directly visible
+spu.ads:39:42: error: use clause would make operation legal
+spu.ads:42:42: error: operator for type "Position" defined at hsu.ads:12 is not directly visible
+spu.ads:42:42: error: use clause would make operation legal
+spu.ads:45:42: error: operator for type "Position" defined at hsu.ads:12 is not directly visible
+spu.ads:45:42: error: use clause would make operation legal

@@ -1,0 +1,7 @@
+spu.ads:6:17: error: "AoA" is undefined (more references follow)
+spu.ads:13:30: error: "PCU" is undefined (more references follow)
+spu.ads:13:45: error: duplicate global item
+spu.ads:13:66: error: duplicate global item
+spu.ads:13:76: error: "HSU" is undefined (more references follow)
+spu.ads:31:17: error: expected type "Standard.Boolean"
+spu.ads:31:17: error: found a composite type

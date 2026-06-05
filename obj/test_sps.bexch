@@ -1,0 +1,25 @@
+[GENERATED OBJECT FILE]
+b__test_sps.o
+[PROJECT FILES]
+C:\GNAT\2021\bin\Mycw1\codinghere.gpr
+20251014152010 3ba22da51d93ec33e219c26b26376dea
+[BOUND OBJECT FILES]
+C:\GNAT\2021\bin\Mycw1\obj\aoa.o
+C:\GNAT\2021\bin\Mycw1\obj\hsu.o
+C:\GNAT\2021\bin\Mycw1\obj\pcu.o
+C:\GNAT\2021\bin\Mycw1\obj\env.o
+C:\GNAT\2021\bin\Mycw1\obj\spu.o
+C:\GNAT\2021\bin\Mycw1\obj\log.o
+C:\GNAT\2021\bin\Mycw1\obj\test_sps.o
+[GENERATED SOURCE FILES]
+b__test_sps.ads
+b__test_sps.adb
+b__test_sps.ali
+[RESULTING OPTIONS]
+-LC:\GNAT\2021\bin\Mycw1\obj\
+-LC:\GNAT\2021\bin\Mycw1\obj\
+-LC:/gnat/2021/lib/gcc/x86_64-w64-mingw32/10.3.1/adalib/
+-static
+-static-libgcc
+C:/gnat/2021/lib/gcc/x86_64-w64-mingw32/10.3.1/adalib/libgnat.a
+-Wl,--stack=0x2000000

@@ -1,0 +1,8 @@
+spu.ads:19:36: medium: incorrect dependency "Prev_ModeOn => SensorState"[#3]
+spu.ads:19:65: medium: incorrect dependency "Prev_ModeOn => Prev_ModeOn"[#2]
+spu.ads:20:52: medium: incorrect dependency "Prev_Major => AlarmON"[#1]
+spu.ads:20:65: medium: incorrect dependency "Prev_Major => Prev_Major"[#0]
+spu.ads:21:20: medium: missing self-dependency "AlarmON => AlarmON"[#6]
+spu.ads:21:20: medium: missing dependency "AlarmON => SensorState"[#7]
+spu.ads:23:20: medium: missing dependency "TailplaneState => Prev_ModeOn"[#4]
+spu.ads:23:20: medium: missing dependency "TailplaneState => ModeON"[#5]

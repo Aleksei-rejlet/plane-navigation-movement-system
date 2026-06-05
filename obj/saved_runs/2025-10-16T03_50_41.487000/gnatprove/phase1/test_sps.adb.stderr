@@ -1,0 +1,1 @@
+spu.ads:20:38: error: write-only global "AlarmON" cannot appear as input in dependence relation

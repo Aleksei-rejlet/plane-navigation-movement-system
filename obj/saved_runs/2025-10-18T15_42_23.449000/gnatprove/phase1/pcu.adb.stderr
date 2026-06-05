@@ -1,0 +1,1 @@
+pcu.adb:2:01: error: pragma "Assert" must be in declaration/statement context

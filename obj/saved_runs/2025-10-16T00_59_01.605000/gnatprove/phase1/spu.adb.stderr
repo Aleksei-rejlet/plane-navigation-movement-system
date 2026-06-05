@@ -1,0 +1,3 @@
+spu.ads:24:84: error: extra "," ignored
+spu.ads:25:18: error: "=>" expected (positional association cannot follow named association)
+spu.ads:40:17: error: missing ")"

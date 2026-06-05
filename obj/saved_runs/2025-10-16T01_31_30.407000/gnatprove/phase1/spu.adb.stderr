@@ -1,0 +1,9 @@
+spu.ads:37:29: error: missing operand
+spu.ads:38:14: error: statement not allowed in package spec
+spu.ads:39:54: error: missing ";"
+spu.ads:41:58: error: missing ";"
+spu.ads:43:11: error: declaration expected
+spu.ads:45:58: error: missing ";"
+spu.ads:47:57: error: missing ";"
+spu.ads:49:11: error: no "if" for this "end if"
+spu.ads:51:07: error: statement expected
